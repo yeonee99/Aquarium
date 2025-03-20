@@ -22,52 +22,52 @@
     margin-bottom: 200px; height: 100vh; margin-top: 80px; background-repeat: no-repeat; background-position: top; background-size: cover;
 }
 [class^='guidancePage'] .bgBox{
-    background-image: url(img/bg/guidance_bg.jpg);
+    background-image: url(../img/bg/guidance_bg.jpg);
 }
 [class^='customerPage'] .bgBox{
-    background-image: url(img/bg/customer_bg.jpg);
+    background-image: url(../img/bg/customer_bg.jpg);
 }
 .friendmainBox .bgBox{
-    background-image: url(img/bg/friends_bg.jpg);
+    background-image: url(../img/bg/friends_bg.jpg);
 }
 .sharkBox .bgBox{
-    background-image: url(img/bg/shark_bg.jpg);
+    background-image: url(../img/bg/shark_bg.jpg);
 }
 .piraBox .bgBox{
-    background-image: url(img/bg/pira_bg.jpg);
+    background-image: url(../img/bg/pira_bg.jpg);
 }
 .turtleBox .bgBox{
-    background-image: url(img/bg/turtle_bg.jpg);
+    background-image: url(../img/bg/turtle_bg.jpg);
 }
 .rainbowBox .bgBox{
-    background-image: url(img/bg/rainbow_bg.jpg);
+    background-image: url(../img/bg/rainbow_bg.jpg);
 }
 .ourBox .bgBox{
-    background-image: url(img/bg/our_bg.jpg);
+    background-image: url(../img/bg/our_bg.jpg);
 }
 .marineBox .bgBox{
-    background-image: url(img/bg/marine_bg.jpg);
+    background-image: url(../img/bg/marine_bg.jpg);
 }
 .seaBox .bgBox{
-    background-image: url(img/bg/sea_bg.jpg);
+    background-image: url(../img/bg/sea_bg.jpg);
 }
 .amajoniaBox .bgBox{
-    background-image: url(img/bg/amajonia_bg.jpg);
+    background-image: url(../img/bg/amajonia_bg.jpg);
 }
 .artBox .bgBox{
-    background-image: url(img/bg/art_bg.jpg);
+    background-image: url(../img/bg/art_bg.jpg);
 }
 .beachBox .bgBox{
-    background-image: url(img/bg/beach_bg.jpg);
+    background-image: url(../img/bg/beach_bg.jpg);
 }
 .deepBox .bgBox{
-    background-image: url(img/bg/deep_bg.jpg);
+    background-image: url(../img/bg/deep_bg.jpg);
 }
 .flowerBox .bgBox{
-    background-image: url(img/bg/flower_bg.jpg);
+    background-image: url(../img/bg/flower_bg.jpg);
 }
 .koreaBox .bgBox{
-    background-image: url(img/bg/korea_bg.jpg);
+    background-image: url(../img/bg/korea_bg.jpg);
 }
 [class^='guidancePage']>*:not(.bgBox),
 [class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
