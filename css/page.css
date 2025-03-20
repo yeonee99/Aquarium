@@ -181,7 +181,7 @@ p.line::after{
     font-size: 30px; font-weight: 600;  line-height: 35px; letter-spacing: 2px; font-family: 'Poppins'; margin-bottom: 50px;
 }
 .mainPart01{
-    background-color: var(--ss06); height: 100vh;
+    background-color: lightblue; height: 100vh;
 }
 [class*='mainPart']:not(.mainPart05){
     margin-bottom: 200px;
