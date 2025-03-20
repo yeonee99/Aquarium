@@ -1,0 +1,854 @@
+.bluePoint{
+    display: flex; flex-direction: row; margin-top: 70px;
+}
+.bluePoint span{
+    background-color: var(--ss05); border-radius: 20px; text-align: center; height: 20px; width: 20px;
+    color: var(--white01); font-size: 15px; font-weight: 700; line-height: 20px; margin-right: 10px;
+}
+.bluePoint p{
+    font-size: 13px; line-height: 20px; font-weight: 300; color: var(--subtxt); max-width: 580px; word-break: keep-all;
+}
+.blueMapicon{
+    font-size: 15px; line-height: 18px; font-weight: 400; color: var(--maintxt);
+}
+.blueMapicon::before{
+    content: ''; display: inline-block; width: 16px; height: 17px; vertical-align: text-top;
+    background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
+}
+.slideType01 .bluePoint{
+    margin-bottom: 15px;
+}
+.bgBox{
+    margin-bottom: 200px; height: 100vh; margin-top: 80px; background-repeat: no-repeat; background-position: top; background-size: cover;
+}
+[class^='guidancePage'] .bgBox{
+    background-image: url(/img/bg/guidance_bg.jpg);
+}
+[class^='customerPage'] .bgBox{
+    background-image: url(/img/bg/customer_bg.jpg);
+}
+.friendmainBox .bgBox{
+    background-image: url(/img/bg/friends_bg.jpg);
+}
+.sharkBox .bgBox{
+    background-image: url(/img/bg/shark_bg.jpg);
+}
+.piraBox .bgBox{
+    background-image: url(/img/bg/pira_bg.jpg);
+}
+.turtleBox .bgBox{
+    background-image: url(/img/bg/turtle_bg.jpg);
+}
+.rainbowBox .bgBox{
+    background-image: url(/img/bg/rainbow_bg.jpg);
+}
+.ourBox .bgBox{
+    background-image: url(/img/bg/our_bg.jpg);
+}
+.marineBox .bgBox{
+    background-image: url(/img/bg/marine_bg.jpg);
+}
+.seaBox .bgBox{
+    background-image: url(/img/bg/sea_bg.jpg);
+}
+.amajoniaBox .bgBox{
+    background-image: url(/img/bg/amajonia_bg.jpg);
+}
+.artBox .bgBox{
+    background-image: url(/img/bg/art_bg.jpg);
+}
+.beachBox .bgBox{
+    background-image: url(/img/bg/beach_bg.jpg);
+}
+.deepBox .bgBox{
+    background-image: url(/img/bg/deep_bg.jpg);
+}
+.flowerBox .bgBox{
+    background-image: url(/img/bg/flower_bg.jpg);
+}
+.koreaBox .bgBox{
+    background-image: url(/img/bg/korea_bg.jpg);
+}
+[class^='guidancePage']>*:not(.bgBox),
+[class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
+[class^='friend']>*:not(.bgBox,.infoPart){
+    padding: 0 12.5%;
+}
+.titleBox{
+    position: absolute; top: 360px; left: 12.5%;
+}
+.titleBox>*{
+    color: var(--white01);
+}
+.titleBox p.line{
+    font-size: 14px; font-family: var(--pop); font-weight: 400; line-height: 22px; letter-spacing: 1.5px; margin-bottom: 15px;
+}
+p.line::after{
+    content: ''; width: 150px; height: 1px; background-color: rgba(255,255,255,0.5); display: inline-block; margin-left: 5px; vertical-align: middle;
+}
+.titleBox p:last-of-type{
+    font-size: 48px; font-weight: 200; line-height: 65px;
+}
+.titleBox p:last-of-type b{
+    font-weight: 600;
+}
+.mainTopText{
+    display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin-bottom: 120px;
+}
+.mainTopText span > b{
+    font-size: 35px; font-weight: 400; line-height: 40px; margin-bottom: 30px; display: block;
+}
+.mainTopText span p{
+    font-size: 18px; font-weight: 400; line-height: 28px; color: var(--subtxt);
+}
+.mainTopText span p b{
+    font-weight: 600;
+}
+.mainTopText span:last-of-type ul li{
+    color: var(--sub02txt); font-size: 15px; font-weight: 400; line-height: 18px; margin-bottom: 5px;
+}
+.accoType01 li{
+    line-height: 78px; border-bottom: 1px solid var(--grey03); cursor: pointer; 
+}
+.accoType01 li b{
+    font-size: 20px; line-height: 28px; font-weight: 400; padding: 20px; display: block; position: relative; color: var(--subtxt);
+}
+.accoType01 li b::after{
+    content: ''; display: block; position: absolute; top: 22px; right: 20px; transform: rotate(0deg); transition: 0.3s ease-in-out;
+    background:url('../img/icon/arrow_bk.png') no-repeat center / contain; width: 25px; height: 25px;
+}
+.accoType01 li b.activeAcco::after{
+    transform: rotate(180deg); transition: 0.3s ease-in-out;
+}
+.accoType01 li p{
+    font-size: 18px; line-height: 28px; font-weight: 400; background-color: var(--bs10); padding: 20px;
+    border-top: 1px solid var(--bg01); display: none;
+}
+.slideType01{
+    position: relative;
+}
+.slideType01 ul{
+    overflow: scroll; white-space: nowrap; scrollbar-width: none; margin-bottom: 35px; font-size: 0;
+}
+.slideType01 ul li{
+     width: 15.27%; display: inline-block;
+}
+.slideType01 ul li:not(:first-of-type){
+    margin-left: 1.666%;
+}
+.slideType01 ul li a{
+    display: block; position: relative;
+}
+.slideType01 ul li a::before{
+    content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); transition: ease-in-out 0.3s;
+}
+.slideType01 ul li a:hover::before{
+    background-color: rgba(0, 0, 0, 0); transition: ease-in-out 0.3s;
+}
+.slideType01 ul li a span{
+    position: absolute; bottom: 20px; right: 24px; color: var(--white01); font-size: 18px; font-weight: 500; display: block; 
+}
+.swiperScrollbar{
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 27px; position: relative;
+}
+.swiperScrollbar::after{
+    content: ''; display: block; position: absolute; top: calc(50% - 2px); left: 0; width: 100%; height: 1px; background-color: var(--grey03);
+    z-index: -1;
+}
+.swiperScrollbar div.indi{
+    position: absolute; top: 0; left: 0; width: 50px; background-color: var(--white01); border: 1px solid var(--maintxt); border-radius: 15px;
+}
+.swiperScrollbar div.indi::after{
+    content: '>'; display: inline-block; 
+}
+.swiperScrollbar div.indi::before{
+    content: '<'; display: inline-block; padding-left: 10px; padding-right: 10px;
+}
+.tabMenu01 li{
+    font-size: 20px; line-height: 28px; font-weight: 300; color: var(--sub02txt); display: inline-block; cursor: pointer;
+}
+.tabMenu01 li.activeTab{
+    color: var(--bs04); font-weight: 600;
+}
+.tabMenu01 li:not(:first-of-type){
+    margin-left: 25px;
+}
+
+
+
+.mainPage h3{
+    font-size: 30px; font-weight: 600;  line-height: 35px; letter-spacing: 2px; font-family: 'Poppins'; margin-bottom: 50px;
+}
+.mainPart01{
+    background-color: var(--ss06); height: 100vh;
+}
+[class*='mainPart']:not(.mainPart05){
+    margin-bottom: 200px;
+}
+[class*='mainPart']:not(.mainPart01,.mainPart03){
+    margin-left:12.5%; margin-right: 12.5%;
+}
+.mainPart02 ul li:not(:last-of-type){
+    margin-bottom: 60px;
+}
+.mainPart02 ul li a{
+    display: flex; position: relative;
+}
+.mainPart02 ul li:nth-of-type(even) a{
+    flex-direction: row-reverse;
+}
+.mainPart02 ul li .imgArea{
+    width: 74.583%;
+}
+.mainPart02 ul li .imgArea img{
+    width: 100%;
+}
+.mainPart02 .imgArea .txtWrap{
+    display: none;
+}
+.mainPart02 ul li .txtArea{
+    width: 25.461%; box-sizing: border-box; position: absolute; bottom: 25px; display: flex; justify-content: flex-end; flex-direction: column;
+}
+.mainPart02 ul li:nth-of-type(odd) .txtArea{
+    padding-left: 45px; right: 0;
+}
+.mainPart02 ul li:nth-of-type(even) .txtArea{
+    left: 0; text-align: right; padding-right: 45px;
+}
+.mainPart02 .txtArea .mainText{
+    font-size: 35px; font-weight: 700; line-height: 40px; 
+}
+.mainPart02 .txtArea .miniTitle{
+    font-size: 12px;  font-weight: 500; line-height: 20px; color: var(--sub02txt);
+}
+.mainPart03{
+    background-color: var(--bg01); padding: 200px 12.5%;
+}
+.mainPart03 h3{
+    text-align: center; margin-bottom: 50px;
+}
+.mainPart03 div::after{
+    content: ''; display: block; clear: both;
+}
+.mainPart03 div > div{
+    background-color: var(--white01); padding: 55px; box-sizing: border-box; float: left; width: 49.306%; position: relative;
+}
+.mainPart03 div > div:not(:last-of-type){
+    margin-right: 1.388%;
+}
+.mainPart03 div > div h4{
+    font-size: 35px; font-weight: 700; line-height: 40px;  margin-bottom: 50px;
+}
+.mainPart03 div > div small{
+    font-weight: 400; font-size: 15px; line-height: 18px; color: var(--subtxt); float: right;
+}
+.mainPart03 div > div dl::after{
+    content: ''; display: block; clear: both;
+}
+.mainPart03 div > div dl >*{
+    font-size: 25px; font-weight: 500; line-height: 30px; color: var(--subtxt);
+}
+.mainPart03 div > div dl{
+    display: grid; grid-template-columns: auto 1fr; gap: 24px 50px; margin-bottom: 50px;
+}
+.mainPart03 div > div a{
+    position: absolute; right: 55px; bottom: 55px; font-weight: 500; font-size: 18px; color: var(--subtxt);
+}
+.moreBtn01::after{
+    background: url(../img/icon/arrow.png) no-repeat; background-size: 8px; content: ''; vertical-align: sub; opacity: 0; transition: 0.3s ease-in-out;
+}
+.moreBtn01:hover{
+    color: var(--bs04); transition: 0.6s;
+}
+.moreBtn01:hover::after{
+    opacity: 1;margin-left: 10px;padding-right: 15px;transition: 0.3s ease-out;
+}
+.mainPart04::after{
+    content: ''; display: block; clear: both;
+}
+.mainPart04 > div{
+    float: left; width: 32.222%; height: 464px;
+}
+.mainPart04 > div:not(:first-of-type){
+    margin-left: 1.667%;
+}
+.mainPart04 > div span{
+    display: none;
+}
+.mainPart04 > div:nth-of-type(1){
+    background: url(../img/thumb/main_05.jpg) no-repeat center; background-size: 100%;
+}
+.mainPart04 > div:nth-of-type(2){
+    background: url(../img/thumb/main_06.jpg) no-repeat center; background-size: 100%;
+}
+.mainPart04 > div:nth-of-type(3){
+    background: url(../img/thumb/main_07.jpg) no-repeat center; background-size: 100%;
+}
+.mainPart04 > div a{
+    display: flex; flex-direction: column; align-content: center; justify-content: flex-end; text-align: center; height: 100%;
+    padding-bottom: 45px; color: var(--white01); box-sizing: border-box;
+}
+.mainPart04 > div b{
+    display: block; font-size: 35px; font-weight: 700;
+}
+.mainPart05 {
+    border-top: 1px solid var(--maintxt); margin-bottom: 250px;
+}
+.mainPart05 h3{
+    padding-top: 50px; margin-bottom: 25px;
+}
+.mainPart05 > span{
+    position: relative;
+}
+.mainPart05 > span ul.newsTab{
+    margin-bottom: 50px;
+}
+.mainPart05 > span ul.newsTab li{
+    font-size: 15px; line-height: 18px; font-weight: 500; cursor: pointer; color: var(--sub02txt); display: inline-block;
+}
+.mainPart05 > span ul.newsTab li:not(:first-of-type){
+    margin-left: 10px;
+}
+.mainPart05 > span ul.newsTab li:hover,.mainPart05 > span ul li.tabAlive{
+    color: var(--bs04);
+}
+.mainPart05 > span a{
+    position: absolute; top: 0; right: 0; 
+}
+.mainPart05 div{display: none;}
+.mainPart05 div.tabLive{display: block;}
+.mainPart05 div ol::after{
+    content: ''; display: block; clear: both;
+}
+.mainPart05 div ol li{
+    width: 23.75%; float: left;
+}
+.mainPart05 div ol li:not(:first-of-type){
+    margin-left: 1.66%;
+}
+.mainPart05 div ol li:hover > small{
+    color: var(--white01); background-color: var(--bs04); border-color: var(--bs04); transition: 0.3s ease-in-out;
+}
+.mainPart05 div ol li > small{
+    font-size: 15px; font-weight: 400; line-height: 30px; max-width: 80px; color: var(--subtxt); transition: 0.3s ease-in-out;
+    border: 1px solid var(--subtxt); border-radius: 15px; display: block; text-align: center; margin-bottom: 15px;
+}
+.mainPart05 div ol li a p{
+    font-size: 16px; font-weight: 400; line-height: 20px; margin-bottom: 5px;
+}
+.mainPart05 div ol li a small{
+    font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt); display: block; margin-bottom: 30px;
+}
+.mainPart05 div ol li a img{
+    width: 100%;
+}
+
+.guidancePage01 .wallPaper{
+    margin-bottom: 250px;
+}
+.guidancePage01 .wallPaper > span div.navBtn{
+    display: flex; flex-direction: row; justify-content: center; margin-bottom: 45px;
+}
+.guidancePage01 .wallPaper > span div.navBtn >*{
+    text-align: center;
+}
+.guidancePage01 .wallPaper > span div.navBtn p{
+    margin: 0 15px; font-size: 30px; font-weight: 500; line-height: 48px; color: var(--subtxt);
+}
+.guidancePage01 .wallPaper div.calendar ul.weeks{
+    background-color: var(--ss10); display: flex; flex-direction: row; border: 1px solid var(--grey03);
+}
+.guidancePage01 .wallPaper div.calendar ul.weeks li{
+    color: var(--subtxt); font-size: 20px; font-weight: 600; line-height: 50px; text-align: center;
+    width: 14.285%; 
+}
+.guidancePage01 .wallPaper div.calendar ul.weeks li:not(:last-of-type){
+    border-right: 1px solid var(--grey03);
+}
+.guidancePage01 .wallPaper div.calendar ul.days{
+    border: 1px solid var(--grey03); border-top: 0; border-bottom: 0;  display: flex; flex-direction: row; flex-wrap: wrap;
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li.inactive{
+    color: var(--grey03);
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li{
+    font-size: 20px; line-height: 28px; font-weight: 500; color: var(--subtxt);
+    width: calc(100% / 7); padding-top: 20px; padding-left: 30px; box-sizing: border-box; height: 150px;
+    border-bottom: 1px solid var(--grey03);
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li:not(:nth-of-type(7n)){
+    border-right: 1px solid var(--grey03);
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol,.guidancePage01 .wallPaper div.calendar ul.days > li.today ol{
+    margin-top: 10px;
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li,.guidancePage01 .wallPaper div.calendar ul.days > li.today ol li{
+    font-size: 12px; line-height: 20px; font-weight: 400; color:  var(--subtxt);
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li.blueNotice{
+    color: var(--ss06); margin-top: 10px;
+}
+.guidancePage01 .wallPaper div.calendar ul.days > li.today{
+    background-color: var(--bs10);
+}
+.guidancePage02 .direcPart02{
+    margin-bottom: 250px;
+}
+.guidancePage02 .direcPart02 ul{
+    margin-bottom: 50px; border-bottom: 1px solid var(--sub02txt); padding: 0 25px 20px;
+}
+.guidancePage02 .direcPart02 > div{
+    display: none;
+}
+.guidancePage02 .direcPart02 > div.activeTab{
+    display: block;
+}
+.guidancePage02 .bluePoint{
+    margin-left: 20px;
+}
+.guidancePage03{
+    margin-bottom: 250px;
+}
+.guidancePage03 > img{
+    box-sizing: border-box;
+}
+.guidancePage04 .convPart02{
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 200px;
+}
+.guidancePage04 .convPart02 li{
+    text-align: center;
+}
+.guidancePage04 .convPart02 li img{
+    margin-bottom: 35px; border-radius: 250px;
+}
+.guidancePage04 .convPart02 li b{
+    font-size: 24px; line-height: 28px; font-weight: 600; margin-bottom: 10px; display: block;
+}
+.guidancePage04 .convPart02 li p{
+    font-size: 16px; line-height: 20px; font-weight: 300; color: var(--subtxt); max-width: 245px; margin: 0 auto;
+}
+.guidancePage04 .convPart03 span{
+    font-size: 25px; font-weight: 600; line-height: 40px; margin-bottom: 25px; padding-left: 20px; display: block;
+}
+.guidancePage04 .convPart03{
+    margin-bottom: 250px;
+}
+[class^='customerPage'] > div > b{
+    font-size: 35px; line-height: 40px; font-weight: 500; text-align: center; display: block;
+}
+.customerPage01 > div > b{
+    margin-bottom: 25px;
+}
+.customerPage01 .tabMenu01{
+    text-align: center; margin-bottom: 100px;
+}
+.customerPage01 div:not(.bgBox) > div:not(.pagerWrap){
+    border-top: 1px solid var(--grey01);
+}
+.customerPage01 div > div > ul li{
+    border-bottom: 1px solid var(--grey03); cursor: pointer; display: flex; flex-direction: row; align-items: center;
+    padding: 0 25px;
+}
+.customerPage01 div > div > ul li:hover{
+    background-color: var(--bg01);
+}
+.customerPage01 div > div > ul li:hover span{
+    border-color: var(--ss06); color: var(--ss06); transition: ease-in 0.2s;
+}
+
+.customerPage01 div > div > ul li span{
+    font-size: 18px; line-height: 40px; font-weight: 400; border: 1px solid var(--grey02); padding: 0 18px;
+    border-radius: 50px; transition: ease-in 0.2s;
+}
+.customerPage01 div > div > ul li p{
+    padding: 25px 30px; font-size: 18px; line-height: 40px; font-weight: 400;   
+}
+.customerPage01 div > div > ul li small{
+    font-size: 15px; color: var(--subtxt); margin-left: auto;
+}
+.customerPage02 > div > b{
+    margin-bottom: 50px;
+}
+.customerPage02 > div:not(:last-of-type){
+    margin-bottom: 150px;
+}
+.customerPage02 .accoType01 li:nth-of-type(1){
+    border-top: 1px solid var(--grey01);
+}
+.customerPage02 > div:last-of-type{
+    margin-bottom: 250px;
+}
+.customerPage01 .pagerWrap{
+   margin-bottom: 250px;
+} 
+.pagerWrap{
+    display: flex; flex-direction: row; justify-content: center; margin-top: 50px;
+}
+.pagerWrap a{
+    content: ''; width: 10px; height: 25px; background-repeat: no-repeat; background-position: center; background-size: 60%;
+}
+.pagerWrap a.beforeBtn{
+    background-image: url(../img/icon/arrow_gery.png); margin-right: 10px;
+}
+.pagerWrap a.afterBtn{
+    background-image: url(../img/icon/arrow_grey_r.png); margin-left: 10px;
+}
+.pagerWrap .pagerNumb li{
+    display: inline-block; font-size: 15px; font-weight: 500; line-height: 18px; color: var(--sub02txt);
+    width: 30px; text-align: center; cursor: pointer;
+}
+.pagerWrap .pagerNumb li.activePager{
+    color: var(--maintxt); position: relative;
+}
+.pagerWrap .pagerNumb li.activePager:after{
+    content: ''; display: block; position: absolute; bottom: -5px; left: 25%; width: 15px; height: 2px; background-color: var(--ss06); 
+}
+.greenStar:before{
+    content: '*'; color: var(--gs01); margin-right: 5px; vertical-align: bottom; position: absolute; top: 3px; left: -10px;
+}
+.customerPage03 .formBox{
+    margin-bottom: 250px;
+}
+.customerPage03 .formBox legend{
+    font-size: 35px; line-height: 40px; font-weight: 500; margin-bottom: 50px; display: block; text-align: center;
+}
+.customerPage03 .formBox fieldset div{
+    border: 1px solid var(--grey02); padding: 60px 3.819%; position: relative; display: flex; flex-direction: row;
+    gap: 24px;  justify-content: space-between;
+}
+.customerPage03 .formBox fieldset div > input[type='submit']{
+    position: absolute; bottom: 55px; right: 55px; width: 100%; max-width: 194px; height: 44px; border: 1px solid var(--grey01);
+    cursor: pointer; background-color: var(--white01); font-size: 15px; font-weight: 400; line-height: 18px; text-align: center;
+}
+.customerPage03 .formBox fieldset div label,
+.customerPage03 .formBox fieldset div > span span{
+    font-size: 15px; line-height: 18px; font-weight: 400;
+}
+.customerPage03 .formBox fieldset div > ul {
+    box-sizing: border-box; width: calc(50% - 12px); list-style: none; padding: 0; margin: 0;
+}
+.customerPage03 .formBox fieldset div > ul > li:not(:last-of-type){
+    margin-bottom: 15px; align-items: center;
+}
+.customerPage03 .formBox fieldset div > ul > li:last-of-type label{
+    margin-top: 10px;
+}
+.customerPage03 .formBox fieldset div > ul > li {
+    display: flex; gap: 20px; line-height: 30px;
+}
+.customerPage03 .formBox fieldset div > ul > li label {
+    min-width: 70px; white-space: nowrap; text-align: left; position: relative;
+}
+.customerPage03 .formBox fieldset div > ul > li input,
+.customerPage03 .formBox fieldset div > ul > li textarea {
+    flex-grow: 1; max-width: 100%; box-sizing: border-box;
+}
+.customerPage03 .formBox fieldset div > ul > li input{
+    line-height: 33px; border: 1px solid var(--grey01); padding: 0 15px; box-sizing: border-box; width: 100%;
+}
+.customerPage03 .formBox fieldset div > ul > li input::placeholder{
+    color: var(--grey01);
+}
+.customerPage03 .formBox fieldset div > ul > li > ol{
+    display: flex; flex-direction: row; gap: 5px 20px; flex-wrap: wrap;
+}
+.customerPage03 .formBox fieldset div > ul > li > ol li{
+    white-space:nowarp;
+}
+.customerPage03 .formBox fieldset div > ul > li > ol li label{
+    cursor: pointer;
+}
+.customerPage03 .formBox fieldset div > ul li textarea{
+    width: 100%; height: 300px; border: 1px solid var(--grey01); resize: none; padding: 15px;
+    max-width: 100%; box-sizing: border-box;
+}
+.customerPage03 .formBox fieldset div > span{
+    width: calc(50% - 12px); padding-left: 5.2777%; box-sizing: border-box;
+}
+.customerPage03 .formBox fieldset div > span b{
+    font-size: 18px; line-height: 28px; font-weight: 600; display: block; margin-bottom: 25px;
+}
+.customerPage03 .formBox fieldset div > span ul li:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.customerPage03 .formBox fieldset div > span ul li span{
+    display: block;
+}
+.customerPage03 .formBox fieldset div > span ul li p{
+    color: var(--sub02txt); word-break: keep-all; font-weight: 300; line-height: 25px; margin-top: 5px;
+}
+.customerPage03 .formBox fieldset div > ul li input[type='radio'],
+.customerPage03 .formBox fieldset div > span ul li input[type='checkbox']{
+    position: absolute; 
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+.customerPage03 .formBox fieldset div > ul li > ol li label{
+    background: url('../img/icon/radio.png') no-repeat left 46% / 13px; padding-left: 20px;
+}
+.customerPage03 .formBox fieldset div > ul li > ol li input[type='radio']:checked + label{
+    background: url('../img/icon/radio_checked.png') no-repeat left 46% / 13px;
+}
+.customerPage03 .formBox fieldset div > span ul li label{
+    cursor: pointer; background: url('../img/icon/chBox.png') no-repeat right 46% / 17px; padding-right: 30px;
+    margin-bottom: 5px;
+}
+.customerPage03 .formBox fieldset div > span ul li input[type='checkbox']:checked + label{
+    background: url('../img/icon/chBox_checked.png') no-repeat right 46% / 17px;
+}
+.friendmainBox > div:nth-of-type(2) > div >*{
+    display: block;
+}
+.friendmainBox > div:nth-of-type(2) > div > b{
+    font-size: 35px; line-height: 40px; font-weight: 500; margin-bottom: 25px;
+}
+.friendmainBox > div:nth-of-type(2) > div > p{
+    font-size: 18px; line-height: 28px; font-weight: 400;  max-width: 455px;
+}
+.friendmainBox > div:nth-of-type(2){
+    margin-bottom: 200px;
+}
+.friendmainBox > div:nth-of-type(2) > div:first-of-type{
+    margin-bottom: 70px;
+}
+.friendmainBox > div:nth-of-type(2) div ul {
+    display: flex; flex-direction: row; gap: 24px;
+}
+.friendmainBox > div:nth-of-type(2) div ul li div{
+   box-shadow: 0px 6px 13px 1px rgba(156,156,156,0.2); border-radius: 15px; overflow: hidden;
+}
+.friendmainBox > div:nth-of-type(2) div ul li div span{
+    padding: 35px 30px; display: block; box-sizing: border-box;
+}
+.friendmainBox > div:nth-of-type(2) div ul li:hover a::after{
+    background-color: rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; display: block; z-index: 555;
+    width: 100%; height: 100%;
+}
+.friendmainBox > div:nth-of-type(2) div ul li b{
+    font-size: 25px; line-height: 30px; font-weight: 500; margin-bottom: 5px; display: block;
+}
+.friendmainBox > div:nth-of-type(2) div ul li small{
+    font-size: 15px; line-height: 18px; font-weight: 300; color: var(--subtxt); font-family: var(--pop); margin-bottom: 20px; display: block;
+}
+.friendmainBox .slideType01{
+    margin-bottom: 250px;
+}
+.friendBox figure::after{
+    content: ''; display: block; clear: both;
+}
+.friendBox figure{
+    margin-bottom: 150px;
+}
+.friendBox figure>*{
+    float: left;
+}
+.friendBox figure img{
+    width: 40.694%;
+}
+.friendBox figure figcaption{
+    margin-left: 1.666%; padding-left: 40px;padding-top: 5px; box-sizing: border-box; width: 57.430%;
+}
+.friendBox figure figcaption > div:first-of-type{
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+    margin-bottom: 40px; 
+}
+.friendBox figure figcaption > div:first-of-type h3{
+    font-size: 35px; line-height: 40px; font-weight: 500; display: block;
+}
+.friendBox figure figcaption > div:first-of-type h3 small{
+    font-size: 18px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block;
+    font-family: var(--pop); margin-top: 10px;
+}
+.friendBox figure figcaption > div:first-of-type span small{
+    font-size: 15px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block;
+}
+.friendBox figure figcaption > div:first-of-type span small:first-of-type{
+    margin-bottom: 10px;
+}
+.friendBox figure figcaption > div:last-of-type{
+    font-size: 15px; line-height: 26px; font-weight: 400; margin-bottom: 50px;
+}
+.infoPart{
+    background-color: var(--bg01); display: flex; flex-direction: row;  gap: 6.9444%; margin: 0 12.5% 100px;
+    padding: 95px 0; border-radius: 55px; box-sizing: border-box; justify-content: center; 
+}
+.infoPart li{
+    width: 13.888%;
+}
+.infoPart li span{
+    font-size: 18px; line-height: 28px; font-weight: 600; margin-bottom: 10px; display: block; 
+}
+.infoPart li p{
+    font-size: 15px; line-height: 18px; font-weight: 400; color: var(--subtxt);
+}
+.friendBox > div:nth-of-type(2){
+    margin-bottom: 200px;
+}
+.friendBox > div:nth-of-type(2) > div{
+    border-bottom: 1px solid var(--sub02txt); padding: 100px 0; display: flex; align-items: center;
+}
+.friendBox > div:nth-of-type(2) > div span{
+    width: 50%; text-align: center;
+}
+.friendBox > div:nth-of-type(2) > div span:first-of-type{
+    font-size: 35px; font-weight: 600; line-height: 40px;  display: block;
+}
+.friendBox > div:nth-of-type(2) > div span:last-of-type{
+    font-size: 18px; font-weight: 400; line-height: 28px; display: block; max-width: 520px; margin: 0 auto;
+    color: var(--subtxt);
+}
+.friendBox > div:nth-of-type(2) > div:last-of-type span:first-of-type{
+    order: 2;
+}
+.friendBox > div:nth-of-type(2) > div:last-of-type span:last-of-type{
+    order: 1;
+}
+.friendBox > div:last-of-type{
+    position: relative; background-repeat: no-repeat; background-position: center; background-size: contain; height: 100vh;
+    margin-bottom: 250px; background-attachment: fixed;
+}
+.friendBox > div:last-of-type div{
+    position: absolute; 
+}
+.friendBox > div:last-of-type div b{
+    display: block; font-family: var(--pop); font-size: 64px; font-weight: 600; line-height: 80px; margin-bottom: 10px;
+    color: var(--white01);
+}
+.friendBox > div:last-of-type div span{
+    font-size: 18px; font-weight: 500; line-height: 28px; display: block; max-width: 765px; color: var(--white01);
+}
+.turtleBox > div:last-of-type{
+    background-image: url('../img/bg/turtle_bg_02.jpg');
+}
+.turtleBox > div:last-of-type div,.piraBox > div:last-of-type div{
+    bottom: 150px; left: 12.5%;
+}
+.piraBox > div:last-of-type{
+    background-image: url('../img/bg/pira_bg_02.jpg');
+}
+.sharkBox > div:last-of-type{
+    background-image: url('../img/bg/shark_bg_02.jpg');
+}
+.sharkBox > div:last-of-type div{
+    top: 150px; left: 12.5%;
+}
+.aquariumPart01::after{
+    content: ''; display: block; clear: both;
+}
+.aquariumPart01{
+    padding: 0 12.5%; margin-bottom: 250px;
+}
+.aquariumPart01 span{
+    display: block; width: 40.694%; float: left; 
+}
+.aquariumPart01 span img{
+    border-radius: 500px;
+}
+.aquariumPart01 div{
+    width: 57.638%; margin-left: 1.666%; float: left;  padding-left: 8.4722%; box-sizing: border-box;
+    padding-top: 110px;
+}
+.aquariumPart01 div b{
+    font-size: 35px; line-height: 40px; font-weight: 600; display: block; margin-bottom: 25px;
+}
+.aquariumPart01 div p{
+    font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt);
+    max-width: 708px;
+}
+.aquariumPart03 > span{
+    text-align: center; font-size: 20px; line-height: 28px; font-weight: 600; color: var(--subtxt);
+    display: block;
+}
+.aquariumPart03 {
+    position: relative;
+    background: linear-gradient(
+        to top,
+            rgba(255,255,255,0)10%,
+            rgba(255,255,255,0)25%,
+            rgba(255,255,255,0.8)75%,
+            rgba(255,255,255,0.8)80%,  
+            rgba(255,255,255,1)95%,  
+            rgba(255,255,255,1)100%  
+    ),
+    url('/img/bg/inthe_bg.jpg');
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+.aquariumPart03 > div {
+    max-width: 1440px; margin: 0 12.5%; padding: 200px 0 250px; position: relative;
+}
+.slideType03 {
+    max-width: 1200px; margin: 0 8.3333%;
+}
+.slideType03 li{
+    margin:12px; box-shadow: 2px 5px 9px 2px rgba(0,0,0,0.45); cursor: pointer;
+}
+.prevArrow,
+.nextArrow {
+    position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; font-size: 1px;
+    background-size: contain; background-repeat: no-repeat; cursor: pointer; z-index: 10; color: transparent;
+}
+.prevArrow {
+    left: 0; background-image: url('../img/icon/arrow_light.png');
+}
+
+.nextArrow {
+    right: 0; background-image: url('../img/icon/arrow_light.png'); transform: scaleX(-1) translateY(-50%);
+}
+.fancybox__button--zoom{
+    display: none ! important;
+}
+.aquariumPart03 p{
+    font-size: 15px; line-height: 18px; font-weight: 400; text-align: center; margin-bottom: 10px;
+}
+.aquariumPart03 p b{
+    font-weight: 500;
+}
+.noticeDepthBox{
+    margin-bottom: 250px;
+}
+.noticeDepthBox div:nth-of-type(2){
+    border-bottom: 2px solid var(--subtxt); margin: 0 12.5%;
+}
+.noticeDepthBox div:nth-of-type(2) a{
+    display: inline-block; padding-bottom: 25px;
+    color: var(--subtxt); font-size: 20px; line-height: 28px; font-weight: 400; padding-left: 20px;
+}
+.noticeDepthBox div:nth-of-type(2) a::before{
+    content: ''; display: inline-block; background: url('../img/icon/arrow_gery.png')no-repeat left / contain;
+    width: 15px; height: 15px;
+}
+.noticeDepthBox .noticeBox{
+    border-bottom: 1px solid var(--grey01); margin: 0 12.5%; margin-bottom: 25px;
+}
+.noticeDepthBox .noticeBox span{
+    display: flex; flex-direction: row; padding: 40px;margin-bottom: 95px; border-bottom: 1px solid var(--grey01);
+}
+.noticeDepthBox .noticeBox span>*:not(small){
+    font-size: 25px; line-height: 30px; font-weight: 500;
+}
+.noticeDepthBox .noticeBox span b::after{
+    content: '|'; display: inline-block; margin: 0 15px;
+}
+.noticeDepthBox .noticeBox span small{
+    font-size: 20px; line-height: 28px; font-weight: 400; color: var(--subtxt); margin-left: auto;
+}
+.noticeDepthBox .noticeBox > div{
+    max-width: 952px; margin: 0 auto; padding-bottom: 150px;
+}
+.noticeDepthBox .noticeBox > div img{
+    margin-bottom: 55px;
+}
+.noticeDepthBox .noticeBox > div p{
+    font-size: 18px; line-height: 28px; font-weight: 400;
+}
+.noticeDepthBox .noticeBox > div p:first-of-type{
+    margin-bottom: 40px;
+}
+.noticeDepthBox .noticeBox > div p:not(:first-of-type){
+    margin-bottom: 20px;
+}
+.noticeDepthBox > a{
+    display: block; text-align: right;
+}
