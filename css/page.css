@@ -13,7 +13,7 @@
 }
 .blueMapicon::before{
     content: ''; display: inline-block; width: 16px; height: 17px; vertical-align: text-top;
-    background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
+    background: url('..img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
 }
 .slideType01 .bluePoint{
     margin-bottom: 15px;
@@ -22,52 +22,52 @@
     margin-bottom: 200px; height: 100vh; margin-top: 80px; background-repeat: no-repeat; background-position: top; background-size: cover;
 }
 [class^='guidancePage'] .bgBox{
-    background-image: url(/img/bg/guidance_bg.jpg);
+    background-image: url(img/bg/guidance_bg.jpg);
 }
 [class^='customerPage'] .bgBox{
-    background-image: url(/img/bg/customer_bg.jpg);
+    background-image: url(img/bg/customer_bg.jpg);
 }
 .friendmainBox .bgBox{
-    background-image: url(/img/bg/friends_bg.jpg);
+    background-image: url(img/bg/friends_bg.jpg);
 }
 .sharkBox .bgBox{
-    background-image: url(/img/bg/shark_bg.jpg);
+    background-image: url(img/bg/shark_bg.jpg);
 }
 .piraBox .bgBox{
-    background-image: url(/img/bg/pira_bg.jpg);
+    background-image: url(img/bg/pira_bg.jpg);
 }
 .turtleBox .bgBox{
-    background-image: url(/img/bg/turtle_bg.jpg);
+    background-image: url(img/bg/turtle_bg.jpg);
 }
 .rainbowBox .bgBox{
-    background-image: url(/img/bg/rainbow_bg.jpg);
+    background-image: url(img/bg/rainbow_bg.jpg);
 }
 .ourBox .bgBox{
-    background-image: url(/img/bg/our_bg.jpg);
+    background-image: url(img/bg/our_bg.jpg);
 }
 .marineBox .bgBox{
-    background-image: url(/img/bg/marine_bg.jpg);
+    background-image: url(img/bg/marine_bg.jpg);
 }
 .seaBox .bgBox{
-    background-image: url(/img/bg/sea_bg.jpg);
+    background-image: url(img/bg/sea_bg.jpg);
 }
 .amajoniaBox .bgBox{
-    background-image: url(/img/bg/amajonia_bg.jpg);
+    background-image: url(img/bg/amajonia_bg.jpg);
 }
 .artBox .bgBox{
-    background-image: url(/img/bg/art_bg.jpg);
+    background-image: url(img/bg/art_bg.jpg);
 }
 .beachBox .bgBox{
-    background-image: url(/img/bg/beach_bg.jpg);
+    background-image: url(img/bg/beach_bg.jpg);
 }
 .deepBox .bgBox{
-    background-image: url(/img/bg/deep_bg.jpg);
+    background-image: url(img/bg/deep_bg.jpg);
 }
 .flowerBox .bgBox{
-    background-image: url(/img/bg/flower_bg.jpg);
+    background-image: url(img/bg/flower_bg.jpg);
 }
 .koreaBox .bgBox{
-    background-image: url(/img/bg/korea_bg.jpg);
+    background-image: url(img/bg/korea_bg.jpg);
 }
 [class^='guidancePage']>*:not(.bgBox),
 [class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
@@ -115,7 +115,7 @@ p.line::after{
 }
 .accoType01 li b::after{
     content: ''; display: block; position: absolute; top: 22px; right: 20px; transform: rotate(0deg); transition: 0.3s ease-in-out;
-    background:url('../img/icon/arrow_bk.png') no-repeat center / contain; width: 25px; height: 25px;
+    background:url('..img/icon/arrow_bk.png') no-repeat center / contain; width: 25px; height: 25px;
 }
 .accoType01 li b.activeAcco::after{
     transform: rotate(180deg); transition: 0.3s ease-in-out;
@@ -256,7 +256,7 @@ p.line::after{
     position: absolute; right: 55px; bottom: 55px; font-weight: 500; font-size: 18px; color: var(--subtxt);
 }
 .moreBtn01::after{
-    background: url(../img/icon/arrow.png) no-repeat; background-size: 8px; content: ''; vertical-align: sub; opacity: 0; transition: 0.3s ease-in-out;
+    background: url(..img/icon/arrow.png) no-repeat; background-size: 8px; content: ''; vertical-align: sub; opacity: 0; transition: 0.3s ease-in-out;
 }
 .moreBtn01:hover{
     color: var(--bs04); transition: 0.6s;
@@ -277,13 +277,13 @@ p.line::after{
     display: none;
 }
 .mainPart04 > div:nth-of-type(1){
-    background: url(../img/thumb/main_05.jpg) no-repeat center; background-size: 100%;
+    background: url(..img/thumb/main_05.jpg) no-repeat center; background-size: 100%;
 }
 .mainPart04 > div:nth-of-type(2){
-    background: url(../img/thumb/main_06.jpg) no-repeat center; background-size: 100%;
+    background: url(..img/thumb/main_06.jpg) no-repeat center; background-size: 100%;
 }
 .mainPart04 > div:nth-of-type(3){
-    background: url(../img/thumb/main_07.jpg) no-repeat center; background-size: 100%;
+    background: url(..img/thumb/main_07.jpg) no-repeat center; background-size: 100%;
 }
 .mainPart04 > div a{
     display: flex; flex-direction: column; align-content: center; justify-content: flex-end; text-align: center; height: 100%;
@@ -489,10 +489,10 @@ p.line::after{
     content: ''; width: 10px; height: 25px; background-repeat: no-repeat; background-position: center; background-size: 60%;
 }
 .pagerWrap a.beforeBtn{
-    background-image: url(../img/icon/arrow_gery.png); margin-right: 10px;
+    background-image: url(..img/icon/arrow_gery.png); margin-right: 10px;
 }
 .pagerWrap a.afterBtn{
-    background-image: url(../img/icon/arrow_grey_r.png); margin-left: 10px;
+    background-image: url(..img/icon/arrow_grey_r.png); margin-left: 10px;
 }
 .pagerWrap .pagerNumb li{
     display: inline-block; font-size: 15px; font-weight: 500; line-height: 18px; color: var(--sub02txt);
@@ -586,17 +586,17 @@ p.line::after{
     height: 1px;
 }
 .customerPage03 .formBox fieldset div > ul li > ol li label{
-    background: url('../img/icon/radio.png') no-repeat left 46% / 13px; padding-left: 20px;
+    background: url('..img/icon/radio.png') no-repeat left 46% / 13px; padding-left: 20px;
 }
 .customerPage03 .formBox fieldset div > ul li > ol li input[type='radio']:checked + label{
-    background: url('../img/icon/radio_checked.png') no-repeat left 46% / 13px;
+    background: url('..img/icon/radio_checked.png') no-repeat left 46% / 13px;
 }
 .customerPage03 .formBox fieldset div > span ul li label{
-    cursor: pointer; background: url('../img/icon/chBox.png') no-repeat right 46% / 17px; padding-right: 30px;
+    cursor: pointer; background: url('..img/icon/chBox.png') no-repeat right 46% / 17px; padding-right: 30px;
     margin-bottom: 5px;
 }
 .customerPage03 .formBox fieldset div > span ul li input[type='checkbox']:checked + label{
-    background: url('../img/icon/chBox_checked.png') no-repeat right 46% / 17px;
+    background: url('..img/icon/chBox_checked.png') no-repeat right 46% / 17px;
 }
 .friendmainBox > div:nth-of-type(2) > div >*{
     display: block;
@@ -720,16 +720,16 @@ p.line::after{
     font-size: 18px; font-weight: 500; line-height: 28px; display: block; max-width: 765px; color: var(--white01);
 }
 .turtleBox > div:last-of-type{
-    background-image: url('../img/bg/turtle_bg_02.jpg');
+    background-image: url('..img/bg/turtle_bg_02.jpg');
 }
 .turtleBox > div:last-of-type div,.piraBox > div:last-of-type div{
     bottom: 150px; left: 12.5%;
 }
 .piraBox > div:last-of-type{
-    background-image: url('../img/bg/pira_bg_02.jpg');
+    background-image: url('..img/bg/pira_bg_02.jpg');
 }
 .sharkBox > div:last-of-type{
-    background-image: url('../img/bg/shark_bg_02.jpg');
+    background-image: url('..img/bg/shark_bg_02.jpg');
 }
 .sharkBox > div:last-of-type div{
     top: 150px; left: 12.5%;
@@ -772,7 +772,7 @@ p.line::after{
             rgba(255,255,255,1)95%,  
             rgba(255,255,255,1)100%  
     ),
-    url('/img/bg/inthe_bg.jpg');
+    url('..img/bg/inthe_bg.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center;
 }
 .aquariumPart03 > div {
@@ -790,11 +790,11 @@ p.line::after{
     background-size: contain; background-repeat: no-repeat; cursor: pointer; z-index: 10; color: transparent;
 }
 .prevArrow {
-    left: 0; background-image: url('../img/icon/arrow_light.png');
+    left: 0; background-image: url('..img/icon/arrow_light.png');
 }
 
 .nextArrow {
-    right: 0; background-image: url('../img/icon/arrow_light.png'); transform: scaleX(-1) translateY(-50%);
+    right: 0; background-image: url('..img/icon/arrow_light.png'); transform: scaleX(-1) translateY(-50%);
 }
 .fancybox__button--zoom{
     display: none ! important;
@@ -816,7 +816,7 @@ p.line::after{
     color: var(--subtxt); font-size: 20px; line-height: 28px; font-weight: 400; padding-left: 20px;
 }
 .noticeDepthBox div:nth-of-type(2) a::before{
-    content: ''; display: inline-block; background: url('../img/icon/arrow_gery.png')no-repeat left / contain;
+    content: ''; display: inline-block; background: url('..img/icon/arrow_gery.png')no-repeat left / contain;
     width: 15px; height: 15px;
 }
 .noticeDepthBox .noticeBox{
