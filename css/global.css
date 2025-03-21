@@ -26,7 +26,7 @@ header .header_inner .nav_wrap{
     display: flex; flex-direction: row;
 }
 header .header_inner .nav_wrap ul{
-    display: flex; flex-direction: row; padding-bottom: 25px;
+    display: flex; flex-direction: row;
 }
 header .header_inner .nav_wrap ul > li{
     flex: 1;
@@ -47,7 +47,6 @@ header .header_inner .nav_wrap ul > li ol{
 header .header_inner .nav_wrap ul > li ol > li a{
     font-size: 16px; font-weight: 400; position: relative; display: inline-block;
     transition: background-size 0.3s ease-in-out; padding-bottom: 2px;
-    
     background-image: linear-gradient(var(--ss06), var(--ss06)); background-repeat: no-repeat;
     background-position: left bottom; background-size: 0% 1px;
 }
@@ -58,10 +57,6 @@ header .header_inner .nav_wrap ul > li ol > li a:hover{
 }
 header .header_inner .nav_wrap ul > li ol > li:not(:last-of-type){
     margin-bottom: 25px;
-}
-header .navBg{
-    background-color: var(--white01);  height: 80px; position: absolute; top: 0; left: 0;
-    width: 100%; z-index: 9;
 }
 header .header_inner > span{
     line-height: 80px;
@@ -77,39 +72,24 @@ header .header_inner span ul li:last-of-type a{
     content: ''; display: inline-block; background: url('../img/icon/global.png') no-repeat; background-size: 100%; width: 16px;
     height: 16px; vertical-align: middle; margin-left: 10px;
 }
+header.nav-hover{
+    transition: 0.5s ease-in-out;
+}
+header.nav-hover .header_inner .nav_wrap ul > li ol{
+    display: block; animation: navShow 0.3s ease 0.1s both;
+}
+@keyframes navShow {
+	0% {opacity: 0; visibility: hidden;}
+	100% {opacity: 1; visibility: visible;}
+}
+header .navBg{
+    width: 100%; background-color: var(--white01); height: 80px; position: absolute; top: 0; left: 0; z-index: 1;
+    transition: 0.2s ease-in; box-shadow: 0px 4px 11px -1px rgba(0,0,0,0.027);
+}
+
 section{
     padding-top: 80px;
 }
-/*
-header nav{
-    width: 100%; text-align: center; line-height: 80px;
-}
-header ul li > ol {
-    display: none;
-}
-header ul li > a {
-    font-weight: 400; font-size: 16px; display: block;
-}
-header a:hover:not(.loginBtn) {
-    color: var(--ss06);
-}
-header ul li:not(:first-of-type){
-    margin-left: 3.75%;
-}
-header ul > li {
-    display: inline-block; position: relative;
-}
-header span {
-    display: block; width: 100%; max-width: 100px;
-}
-header span ul li a{
-    font-size: 16px; font-weight: 400; color: var(--maintxt); background: url(..img/icon/person.png) no-repeat left; background-size: 15px; padding-left: 22px;
-}
-header span ul li a::after{
-    content: ''; display: inline-block; background: url(..img/icon/global.png) no-repeat; background-size: 100%; width: 16px;
-    height: 16px; vertical-align: middle; margin-left: 10px;
-} */
-
 footer{
     background-color: var(--bs02); color: var(--white01); padding: 100px 6.25%;
 }
@@ -188,15 +168,30 @@ footer > div:last-of-type .moreBtn02{
     color: var(--white01); font-size: 12px; line-height: 15px; font-weight: 400; transition: 0.5s;
 }
 footer > div:last-of-type .moreBtn02:after{
-    transition: 0.5s; content: ""; width: 14px; height: 15px; display: inline-block; background: url(..img/icon/arrow_wh.png) no-repeat;
+    transition: 0.5s; content: ""; width: 14px; height: 15px; display: inline-block; background: url(../img/icon/arrow_wh.png) no-repeat;
     background-size: 100%; vertical-align: middle; opacity: 0;
 }
 footer > div:last-of-type .moreBtn02:hover::after{
     margin-left: 5px; opacity: 1; transition: 0.5s;
 }
 
+
+
+
 @media screen and (min-width:1280px) {
     .nav_m{
         display: none;
     }
+}
+@keyframes maskFill {
+	0% {transform: translate(0,100%);}
+	100% {transform: translate(0,0%);}
+}
+@keyframes maskWidth {
+	0% {width: 100%;}
+	100% {width: 0px;}
+}
+@keyframes projecShow {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }

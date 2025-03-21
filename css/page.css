@@ -13,7 +13,7 @@
 }
 .blueMapicon::before{
     content: ''; display: inline-block; width: 16px; height: 17px; vertical-align: text-top;
-    background: url('..img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
+    background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
 }
 .slideType01 .bluePoint{
     margin-bottom: 15px;
@@ -115,7 +115,7 @@ p.line::after{
 }
 .accoType01 li b::after{
     content: ''; display: block; position: absolute; top: 22px; right: 20px; transform: rotate(0deg); transition: 0.3s ease-in-out;
-    background:url('..img/icon/arrow_bk.png') no-repeat center / contain; width: 25px; height: 25px;
+    background:url('../img/icon/arrow_bk.png') no-repeat center / contain; width: 25px; height: 25px;
 }
 .accoType01 li b.activeAcco::after{
     transform: rotate(180deg); transition: 0.3s ease-in-out;
@@ -174,9 +174,6 @@ p.line::after{
 .tabMenu01 li:not(:first-of-type){
     margin-left: 25px;
 }
-
-
-
 .mainPage h3{
     font-size: 30px; font-weight: 600;  line-height: 35px; letter-spacing: 2px; font-family: 'Poppins'; margin-bottom: 50px;
 }
@@ -189,32 +186,61 @@ p.line::after{
 [class*='mainPart']:not(.mainPart01,.mainPart03){
     margin-left:12.5%; margin-right: 12.5%;
 }
+
+.mainPart02 ul li{
+    position: relative;
+}
 .mainPart02 ul li:not(:last-of-type){
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 .mainPart02 ul li a{
-    display: flex; position: relative;
+    display: flex; flex-direction: row; align-items: flex-end;
 }
 .mainPart02 ul li:nth-of-type(even) a{
     flex-direction: row-reverse;
 }
 .mainPart02 ul li .imgArea{
-    width: 74.583%;
+    width: calc(100% - 366px); height: 100%; transition: all 0.5s ease;
 }
 .mainPart02 ul li .imgArea img{
-    width: 100%;
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
 }
-.mainPart02 .imgArea .txtWrap{
-    display: none;
+.mainPart02 ul li.hover .imgArea{
+    width: 100%; height: 100%;
+}
+.mainPart02 ul li .imgArea .cover{
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+}
+.mainPart02 ul li .imgArea .cover .txtWrap{
+    display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; opacity: 0;
+    transition: 0.3s ease-in;
+}
+.mainPart02 ul li.hover .imgArea .cover .txtWrap{
+    transition: 0.3s ease-in; opacity: 1;
+}
+.mainPart02 ul li .imgWrap::before{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0; content: '';
+}
+.mainPart02 ul li.hover .imgWrap::before{
+    width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.35); 
+}
+.mainPart02 ul li .imgArea .cover .txtWrap p{
+    color: var(--white01); font-size: 35px; font-weight: 600; text-align: center;
+}
+.mainPart02 ul li.hover .txtArea{
+    opacity: 0; display: none;
 }
 .mainPart02 ul li .txtArea{
-    width: 25.461%; box-sizing: border-box; position: absolute; bottom: 25px; display: flex; justify-content: flex-end; flex-direction: column;
+    width: 366px; transition: opacity 0.5s ease; padding-bottom: 24px;
 }
 .mainPart02 ul li:nth-of-type(odd) .txtArea{
-    padding-left: 45px; right: 0;
+    padding-left: 45px;
 }
 .mainPart02 ul li:nth-of-type(even) .txtArea{
     left: 0; text-align: right; padding-right: 45px;
+}
+.mainPart02 ul li .txtArea .mainText{
+    font-size: 35px; font-weight: 700; line-height: 40px; 
 }
 .mainPart02 .txtArea .mainText{
     font-size: 35px; font-weight: 700; line-height: 40px; 
@@ -222,6 +248,19 @@ p.line::after{
 .mainPart02 .txtArea .miniTitle{
     font-size: 12px;  font-weight: 500; line-height: 20px; color: var(--sub02txt);
 }
+
+ .mainPart02 > ul li {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+}
+.mainPart02 > ul li.on {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 .mainPart03{
     background-color: var(--bg01); padding: 200px 12.5%;
 }
@@ -255,15 +294,35 @@ p.line::after{
 .mainPart03 div > div a{
     position: absolute; right: 55px; bottom: 55px; font-weight: 500; font-size: 18px; color: var(--subtxt);
 }
+
+
+
+
 .moreBtn01::after{
-    background: url(..img/icon/arrow.png) no-repeat; background-size: 8px; content: ''; vertical-align: sub; opacity: 0; transition: 0.3s ease-in-out;
+    background: url(../img/icon/arrow.png) no-repeat; background-size: 8px; content: ''; vertical-align: middle; opacity: 0; transition: 0.3s ease-in-out;
 }
 .moreBtn01:hover{
     color: var(--bs04); transition: 0.6s;
 }
 .moreBtn01:hover::after{
-    opacity: 1;margin-left: 10px;padding-right: 15px;transition: 0.3s ease-out;
+    opacity: 1; margin-left: 10px;padding-right: 10px;transition: 0.3s ease-out;
 }
+.under-hover{
+    transition: background-size 0.2s ease-in-out; padding-bottom: 2px; background-image: linear-gradient(var(--subtxt),var(--subtxt));
+    background-repeat: no-repeat; background-position: left bottom; background-size: 0% 1px;
+}
+.under-hover:hover{
+    transition: 0.2s ease-in; background-image: linear-gradient(var(--subtxt),var(--subtxt)); background-repeat: no-repeat;
+    background-position: left 0 bottom 0;background-size: 0 1px; transition: background-size 0.2s;
+    transition-timing-function: ease-out; background-size: 100% 1px;
+}
+
+
+
+
+
+
+
 .mainPart04::after{
     content: ''; display: block; clear: both;
 }
@@ -273,24 +332,37 @@ p.line::after{
 .mainPart04 > div:not(:first-of-type){
     margin-left: 1.667%;
 }
-.mainPart04 > div span{
-    display: none;
-}
 .mainPart04 > div:nth-of-type(1){
-    background: url(..img/thumb/main_05.jpg) no-repeat center; background-size: 100%;
+    background: url(../img/thumb/main_05.jpg) no-repeat center; background-size: cover;
 }
 .mainPart04 > div:nth-of-type(2){
-    background: url(..img/thumb/main_06.jpg) no-repeat center; background-size: 100%;
+    background: url(../img/thumb/main_06.jpg) no-repeat center; background-size: cover;
 }
 .mainPart04 > div:nth-of-type(3){
-    background: url(..img/thumb/main_07.jpg) no-repeat center; background-size: 100%;
+    background: url(../img/thumb/main_07.jpg) no-repeat center; background-size: cover;
 }
-.mainPart04 > div a{
-    display: flex; flex-direction: column; align-content: center; justify-content: flex-end; text-align: center; height: 100%;
-    padding-bottom: 45px; color: var(--white01); box-sizing: border-box;
+.mainPart04 div a{
+    display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; justify-content: flex-end;
+    position: relative; overflow: hidden; padding: 35px; transition: all 0.3s ease-in-out; box-sizing: border-box; color: var(--white01);
 }
-.mainPart04 > div b{
-    display: block; font-size: 35px; font-weight: 700;
+.mainPart04 div a b {
+    display: block; font-size: 30px; transition: transform 0.3s ease-in-out; transform: translateY(15px);
+}
+.mainPart04 div a span {
+    display: block; font-size: 20px; font-weight: 500; opacity: 0; transform: translateY(10px);  padding-bottom: 0px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,  padding-bottom 0.3s ease-in;
+}
+.mainPart04 div a small{
+    font-size: 18px; font-weight: 500; display: block; color: var(--grey03);
+}
+.mainPart04 div a:hover{
+    background-color: rgba(0,0,0,0.35);
+}
+.mainPart04 div a:hover b {
+    transform: translateY(-10px);
+}
+.mainPart04 div a:hover span {
+    opacity: 1; transform: translateY(0); padding-bottom: 55px;
 }
 .mainPart05 {
     border-top: 1px solid var(--maintxt); margin-bottom: 250px;
@@ -305,7 +377,7 @@ p.line::after{
     margin-bottom: 50px;
 }
 .mainPart05 > span ul.newsTab li{
-    font-size: 15px; line-height: 18px; font-weight: 500; cursor: pointer; color: var(--sub02txt); display: inline-block;
+    font-size: 18px; line-height: 18px; font-weight: 500; cursor: pointer; color: var(--sub02txt); display: inline-block;
 }
 .mainPart05 > span ul.newsTab li:not(:first-of-type){
     margin-left: 10px;
@@ -314,7 +386,7 @@ p.line::after{
     color: var(--bs04);
 }
 .mainPart05 > span a{
-    position: absolute; top: 0; right: 0; 
+    position: absolute; top: 0; right: 0; font-size: 15px; font-weight: 400; 
 }
 .mainPart05 div{display: none;}
 .mainPart05 div.tabLive{display: block;}
@@ -322,7 +394,7 @@ p.line::after{
     content: ''; display: block; clear: both;
 }
 .mainPart05 div ol li{
-    width: 23.75%; float: left;
+    width: 23.75%; float: left; cursor: pointer;
 }
 .mainPart05 div ol li:not(:first-of-type){
     margin-left: 1.66%;
@@ -489,10 +561,10 @@ p.line::after{
     content: ''; width: 10px; height: 25px; background-repeat: no-repeat; background-position: center; background-size: 60%;
 }
 .pagerWrap a.beforeBtn{
-    background-image: url(..img/icon/arrow_gery.png); margin-right: 10px;
+    background-image: url(../img/icon/arrow_gery.png); margin-right: 10px;
 }
 .pagerWrap a.afterBtn{
-    background-image: url(..img/icon/arrow_grey_r.png); margin-left: 10px;
+    background-image: url(../img/icon/arrow_grey_r.png); margin-left: 10px;
 }
 .pagerWrap .pagerNumb li{
     display: inline-block; font-size: 15px; font-weight: 500; line-height: 18px; color: var(--sub02txt);
@@ -586,17 +658,17 @@ p.line::after{
     height: 1px;
 }
 .customerPage03 .formBox fieldset div > ul li > ol li label{
-    background: url('..img/icon/radio.png') no-repeat left 46% / 13px; padding-left: 20px;
+    background: url('../img/icon/radio.png') no-repeat left 46% / 13px; padding-left: 20px;
 }
 .customerPage03 .formBox fieldset div > ul li > ol li input[type='radio']:checked + label{
-    background: url('..img/icon/radio_checked.png') no-repeat left 46% / 13px;
+    background: url('../img/icon/radio_checked.png') no-repeat left 46% / 13px;
 }
 .customerPage03 .formBox fieldset div > span ul li label{
-    cursor: pointer; background: url('..img/icon/chBox.png') no-repeat right 46% / 17px; padding-right: 30px;
+    cursor: pointer; background: url('../img/icon/chBox.png') no-repeat right 46% / 17px; padding-right: 30px;
     margin-bottom: 5px;
 }
 .customerPage03 .formBox fieldset div > span ul li input[type='checkbox']:checked + label{
-    background: url('..img/icon/chBox_checked.png') no-repeat right 46% / 17px;
+    background: url('../img/icon/chBox_checked.png') no-repeat right 46% / 17px;
 }
 .friendmainBox > div:nth-of-type(2) > div >*{
     display: block;
@@ -720,16 +792,16 @@ p.line::after{
     font-size: 18px; font-weight: 500; line-height: 28px; display: block; max-width: 765px; color: var(--white01);
 }
 .turtleBox > div:last-of-type{
-    background-image: url('..img/bg/turtle_bg_02.jpg');
+    background-image: url('../img/bg/turtle_bg_02.jpg');
 }
 .turtleBox > div:last-of-type div,.piraBox > div:last-of-type div{
     bottom: 150px; left: 12.5%;
 }
 .piraBox > div:last-of-type{
-    background-image: url('..img/bg/pira_bg_02.jpg');
+    background-image: url('../img/bg/pira_bg_02.jpg');
 }
 .sharkBox > div:last-of-type{
-    background-image: url('..img/bg/shark_bg_02.jpg');
+    background-image: url('../img/bg/shark_bg_02.jpg');
 }
 .sharkBox > div:last-of-type div{
     top: 150px; left: 12.5%;
@@ -772,7 +844,7 @@ p.line::after{
             rgba(255,255,255,1)95%,  
             rgba(255,255,255,1)100%  
     ),
-    url('..img/bg/inthe_bg.jpg');
+    url('../img/bg/inthe_bg.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center;
 }
 .aquariumPart03 > div {
@@ -790,11 +862,11 @@ p.line::after{
     background-size: contain; background-repeat: no-repeat; cursor: pointer; z-index: 10; color: transparent;
 }
 .prevArrow {
-    left: 0; background-image: url('..img/icon/arrow_light.png');
+    left: 0; background-image: url('../img/icon/arrow_light.png');
 }
 
 .nextArrow {
-    right: 0; background-image: url('..img/icon/arrow_light.png'); transform: scaleX(-1) translateY(-50%);
+    right: 0; background-image: url('../img/icon/arrow_light.png'); transform: scaleX(-1) translateY(-50%);
 }
 .fancybox__button--zoom{
     display: none ! important;
@@ -816,7 +888,7 @@ p.line::after{
     color: var(--subtxt); font-size: 20px; line-height: 28px; font-weight: 400; padding-left: 20px;
 }
 .noticeDepthBox div:nth-of-type(2) a::before{
-    content: ''; display: inline-block; background: url('..img/icon/arrow_gery.png')no-repeat left / contain;
+    content: ''; display: inline-block; background: url('../img/icon/arrow_gery.png')no-repeat left / contain;
     width: 15px; height: 15px;
 }
 .noticeDepthBox .noticeBox{
