@@ -133,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
       grabCursor: true,
     });
   
-    // 커스텀 네비게이션 버튼 기능 추가
     document.querySelector(".custom-button-next").addEventListener("click", function () {
       swiper.slideNext();
     });

@@ -1,5 +1,5 @@
 .bluePoint{
-    display: flex; flex-direction: row; margin-top: 70px;
+    display: flex; flex-direction: row;
 }
 .bluePoint span{
     background-color: var(--ss05); border-radius: 20px; text-align: center; height: 20px; width: 20px;
@@ -16,7 +16,7 @@
     background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
 }
 .slideType01 .bluePoint{
-    margin-bottom: 15px;
+    margin-bottom: 15px; margin-top: 70px;
 }
 .bgBox{
     margin-bottom: 200px; height: 100vh; background-repeat: no-repeat; background-position: top; background-size: cover;
@@ -489,7 +489,7 @@ p.line::after{
     display: block;
 }
 .guidancePage02 .bluePoint{
-    margin-left: 20px;
+    margin-left: 20px; margin-top: 70px;
 }
 .guidancePage03{
     margin-bottom: 250px;
@@ -900,8 +900,7 @@ p.line::after{
 }
 .noticeDepthBox div:nth-of-type(2){
     border-bottom: 2px solid var(--subtxt); margin: 0 12.5%;
-}
-.noticeDepthBox div:nth-of-type(2) a{
+}.noticeDepthBox div:nth-of-type(2) a{
     display: inline-block; padding-bottom: 25px;
     color: var(--subtxt); font-size: 20px; line-height: 28px; font-weight: 400; padding-left: 20px;
 }
@@ -942,31 +941,69 @@ p.line::after{
 .noticeDepthBox > a{
     display: block; text-align: right;
 }
-
-
-.slideType02 {
-    width: 300px;
-    height: 400px;
-    position: relative;
-  }
-  
-  .slideType02 .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eee;
-    border-radius: 15px;
-  }
-  
-  .slideType02 .swiper-slide img {
+[class^='programPage'] .textType02 b{
+    font-size: 35px; font-weight: 500; line-height: 40px; margin-bottom: 25px; display: block;
+}
+[class^='programPage'] .textType02 p:first-of-type{
+    font-size: 18px; color: var(--subtxt); line-height: 28px; font-weight: 400; margin-bottom: 50px;
+}
+[class^='programPage'] .textType02 > span{
+    font-size: 20px; line-height: 28px; font-weight: 600; margin-bottom: 15px; display: block;
+}
+[class^='programPage'] .textType02 dl div{
+    display: flex; gap: 5px;
+}
+[class^='programPage'] .textType02 dl div:not(:last-of-type){
+    margin-bottom: 5px;
+}
+[class^='programPage'] .textType02 dl div >*{
+    font-size: 18px; line-height: 28px; font-weight: 500; display: inline-block;
+}
+[class^='programPage'] .textType02 dl dt{
+    color: var(--subtxt); min-width: 90px;
+}
+[class^='programPage'] .textType02 dl dd{
+    margin-left: 5px;
+}
+[class^='programPage'] .bluePoint{
+    margin-top: 25px;
+}
+[class^='programPage']:not(.programPage03) > div:nth-of-type(2) > div:not(:last-of-type){
+    margin-bottom: 150px;
+}
+[class^='programPage']:not(.programPage03) > div:nth-of-type(2){
+    margin-bottom: 200px;
+}
+.programPage03 .aquaristPart01 > div::after{
+    display: block; content: ''; clear: both;
+}
+.programPage03 .aquaristPart01 > div .slideType02{
+    float: left; width: 50%;
+}
+.programPage03 .aquaristPart01 > div .textType02{
+    float: left; width: 32.222%; margin-left: 17.778%;
+}
+.programPage03 .aquaristPart01 .bluePoint{
+    margin-bottom: 100px; 
+}
+.programPage03 .aquaristPart01 a.waterBtn{
+    display: block; text-align: center; background-color: var(--bs10); line-height: 50px;
+    font-size: 18px; font-weight: 400;
+}
+.mealPart02 b{
+    font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 25px;
+}
+.mealPart02 b::before{
+    content: ''; display: inline-block; background:url('../img/icon/time.png')no-repeat center / contain;
+    width: 24px; height: 30px; vertical-align: text-top; margin-right: 10px;
+}
+.mealPart02 table{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* 화살표 버튼 스타일 */
-  .custom-button-prev, .custom-button-next {
+}
+.mealPart02 table thead{
+    background-color: var(--ss10); line-height: 50px;
+}
+.custom-button-prev, .custom-button-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -986,10 +1023,3 @@ p.line::after{
   .custom-button-next {
     right: -40px;
   }
-  
-  /* 비활성화 상태일 때 투명도 조절 */
-  .button-disabled {
-    opacity: 0.3;
-    pointer-events: none; /* 클릭 방지 */
-  }
-  
