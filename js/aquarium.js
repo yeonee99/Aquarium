@@ -126,3 +126,19 @@ $(document).ready(function () {
       }
   );
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".slideType02", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  
+    // 커스텀 네비게이션 버튼 기능 추가
+    document.querySelector(".custom-button-next").addEventListener("click", function () {
+      swiper.slideNext();
+    });
+  
+    document.querySelector(".custom-button-prev").addEventListener("click", function () {
+      swiper.slidePrev();
+    });
+  });

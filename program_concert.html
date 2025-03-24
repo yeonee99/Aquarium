@@ -7,26 +7,113 @@
     <link rel="stylesheet" href="css/import.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/aquarium.js"></script>
 </head>
 <body>
+    <header>
+        <div class="header_inner">
+            <h1>
+                <a href="index.html">
+                    <img src="img/icon/logo_black.png" alt="wellcome to Coex Aquarium">
+                </a>
+            </h1>
+            <nav>
+                <div class="nav_wrap">
+                    <ul class="gnb_list">
+                        <li>
+                            <a href="#">이용안내</a>
+                            <ol>
+                                <li><a href="guidance_time.html">운영시간</a></li>
+                                <li><a href="guidance_directions.html">오시는길</a></li>
+                                <li><a href="guidance_map.html">가이드맵</a></li>
+                                <li><a href="guidance_convenience.html">편의시설</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#" class="hover">프로그램</a>
+                            <ol>
+                                <li><a href="program_concert.html">수중공연</a></li>
+                                <li><a href="program_mealTime.html">생태 설명회</a></li>
+                                <li><a href="program_aquarist.html">직업체험</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">입장권</a>
+                            <ol>
+                                <li><a href="pass_normal.html">일반 입장권</a></li>
+                                <li><a href="pass_year.html">연간 입장권</a></li>
+                                <li><a href="pass_group.html">단체 입장권</a></li>
+                                <li><a href="pass_promot.html">프로모션</a></li>
+                                <li><a href="pass_treatment.html">제휴 및 우대</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">아쿠아리움에는</a>
+                            <ol>
+                                <li><a href="theme_main.html">아쿠아리움 테마존</a></li>
+                                <li><a href="friends_main.html">아쿠아리움 친구들</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">고객의 소리</a>
+                            <ol>
+                                <li><a href="customer_notice.html">공지사항</a></li>
+                                <li><a href="customer_qna.html">자주 묻는 질문</a></li>
+                                <li><a href="customer_one.html">1:1 문의</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="nav_m">
+                <span>메뉴 열기</span>
+                <span>메뉴 닫기</span>
+            </div>
+            <span>
+                <ul>
+                    <li>
+                        <a href="login_page.html" class="loginBtn">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <div class="navBg"></div>
+      </header>
     <section class="programPage01">
-        <div class="titleBox">
-            <p class="line">PROGRAM</p>
-            <p>
-                코엑스 아쿠아리움에서만<br>
-                볼 수 있는 <b>수중공연</b>을 관람해 보세요!
-            </p>
+        <div class="bgBox">
+            <div class="titleBox">
+                <p class="line">PROGRAM</p>
+                <p>
+                    코엑스 아쿠아리움에서만<br>
+                    볼 수 있는 <b>수중공연</b>을 관람해 보세요!
+                </p>
+            </div>
         </div>
         <div class="concertPart01">
             <div>
-                <div class="slideType02">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="swiper slideType02">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">슬라이드 1</div>
+                      <div class="swiper-slide">슬라이드 2</div>
+                      <div class="swiper-slide">슬라이드 3</div>
+                    </div>
+                  
+                    <!-- 내비게이션 버튼 -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  
+                    <!-- 페이지네이션 -->
+                    <div class="swiper-pagination"></div>
                 </div>
                 <div>
                     <b>인어공주 수중공연</b>
