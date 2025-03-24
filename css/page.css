@@ -19,7 +19,7 @@
     margin-bottom: 15px;
 }
 .bgBox{
-    margin-bottom: 200px; height: 100vh; margin-top: 80px; background-repeat: no-repeat; background-position: top; background-size: cover;
+    margin-bottom: 200px; height: 100vh; background-repeat: no-repeat; background-position: top; background-size: cover;
 }
 [class^='guidancePage'] .bgBox{
     background-image: url(../img/bg/guidance_bg.jpg);
@@ -111,7 +111,7 @@ p.line::after{
     line-height: 78px; border-bottom: 1px solid var(--grey03); cursor: pointer; 
 }
 .accoType01 li b{
-    font-size: 20px; line-height: 28px; font-weight: 400; padding: 20px; display: block; position: relative; color: var(--subtxt);
+    font-size: 20px; line-height: 28px; font-weight: 400; padding: 20px; display: block; position: relative; 
 }
 .accoType01 li b::after{
     content: ''; display: block; position: absolute; top: 22px; right: 20px; transform: rotate(0deg); transition: 0.3s ease-in-out;
@@ -121,8 +121,8 @@ p.line::after{
     transform: rotate(180deg); transition: 0.3s ease-in-out;
 }
 .accoType01 li p{
-    font-size: 18px; line-height: 28px; font-weight: 400; background-color: var(--bs10); padding: 20px;
-    border-top: 1px solid var(--bg01); display: none;
+    font-size: 18px; line-height: 32px; font-weight: 400; background-color: var(--bg01); padding: 40px;
+    border-top: 1px solid var(--bg01); display: none; color: var(--subtxt);
 }
 .slideType01{
     position: relative;
@@ -168,7 +168,7 @@ p.line::after{
 .tabMenu01 li{
     font-size: 20px; line-height: 28px; font-weight: 300; color: var(--sub02txt); display: inline-block; cursor: pointer;
 }
-.tabMenu01 li.activeTab{
+.tabMenu01 li.tabAlive{
     color: var(--bs04); font-weight: 600;
 }
 .tabMenu01 li:not(:first-of-type){
@@ -202,14 +202,27 @@ p.line::after{
 .mainPart02 ul li .imgArea{
     width: calc(100% - 366px); height: 100%; transition: all 0.5s ease;
 }
-.mainPart02 ul li .imgArea img{
-    width: 100%; height: 100%; object-fit: cover; object-position: center;
-}
 .mainPart02 ul li.hover .imgArea{
     width: 100%; height: 100%;
 }
+.mainPart02 ul li .imgWrap::before{
+    width: 0; height: 100%; position: absolute; top: 0; left: 0; content: ''; background-color: rgba(0,0,0,0);
+    transition: width 0.5s ease-in-out;
+}
+.mainPart02 ul li.hover .imgWrap::before{
+   width: 100%; background-color: rgba(0,0,0,0.35);
+}
+.mainPart02 ul li:nth-of-type(odd) .imgWrap::before {
+    left: 0; right: auto; transform-origin: left;
+}
+.mainPart02 ul li:nth-of-type(even) .imgWrap::before {
+    left: auto; right: 0; transform-origin: right;
+}
+.mainPart02 ul li .imgArea .imgWrap img{
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+}
 .mainPart02 ul li .imgArea .cover{
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
 .mainPart02 ul li .imgArea .cover .txtWrap{
     display: flex; align-items: center; justify-content: center; height: 100%; width: 100%; opacity: 0;
@@ -218,20 +231,14 @@ p.line::after{
 .mainPart02 ul li.hover .imgArea .cover .txtWrap{
     transition: 0.3s ease-in; opacity: 1;
 }
-.mainPart02 ul li .imgWrap::before{
-    width: 100%; height: 100%; position: absolute; top: 0; left: 0; content: '';
-}
-.mainPart02 ul li.hover .imgWrap::before{
-    width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,0.35); 
-}
 .mainPart02 ul li .imgArea .cover .txtWrap p{
     color: var(--white01); font-size: 35px; font-weight: 600; text-align: center;
 }
-.mainPart02 ul li.hover .txtArea{
-    opacity: 0; display: none;
-}
 .mainPart02 ul li .txtArea{
     width: 366px; transition: opacity 0.5s ease; padding-bottom: 24px;
+}
+.mainPart02 ul li.hover .txtArea{
+    opacity: 0; display: none;
 }
 .mainPart02 ul li:nth-of-type(odd) .txtArea{
     padding-left: 45px;
@@ -407,7 +414,8 @@ p.line::after{
     border: 1px solid var(--subtxt); border-radius: 15px; display: block; text-align: center; margin-bottom: 15px;
 }
 .mainPart05 div ol li a p{
-    font-size: 16px; font-weight: 400; line-height: 20px; margin-bottom: 5px;
+    font-size: 16px; font-weight: 400; line-height: 20px; margin-bottom: 5px; max-width: 250px; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
 }
 .mainPart05 div ol li a small{
     font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt); display: block; margin-bottom: 30px;
@@ -473,7 +481,7 @@ p.line::after{
 .guidancePage02 .direcPart02 > div{
     display: none;
 }
-.guidancePage02 .direcPart02 > div.activeTab{
+.guidancePage02 .direcPart02 > div.tabLive{
     display: block;
 }
 .guidancePage02 .bluePoint{
@@ -550,6 +558,12 @@ p.line::after{
 }
 .customerPage02 > div:last-of-type{
     margin-bottom: 250px;
+}
+.customerPage02 .accoType01 li p a{
+    display: block; margin-top: 15px; max-width: 75px; line-height: 20px; font-size: 16px;
+}
+.customerPage02 .accoType01 li p span{
+    margin-top: 40px; display: block; font-size: 15px; line-height: 18px;
 }
 .customerPage01 .pagerWrap{
    margin-bottom: 250px;

@@ -2,7 +2,10 @@
     slick('.slideType03');
     headerH('header .gnb_list');
     tabUI(".newsTab li",".mainPart05 > div");
+    tabUI(".tabMenu01 li",".direcPart02 > div");
     hoverE('.mainPart02 ul > li');
+    toggleDown('.accoType01 li b');
+    filter('.noticeMenu li');
   })
 
   function slick(target){
@@ -47,6 +50,20 @@ function tabUI(tabMenu,tabCont){
       $("#"+tabOk).addClass('tabLive');
   });
 }
+
+function filter(targetD){
+    $(targetD).click(function(){
+        var filterA = $(this).attr('data-filter');
+        if(filterA == 'all'){
+            $('.itemBox').show();
+        } else{
+            $('.itemBox').not('.'+filterA).hide()
+            $('.itemBox').filter('.'+filterA).show()
+        }
+    })
+}
+
+
 function hoverE(targetB){
   $(targetB).hover(function(){
     $(this).addClass('hover');
@@ -55,6 +72,11 @@ function hoverE(targetB){
   })
 }
 
+function toggleDown(targetC) {
+    $(targetC).click(function () {
+        $(this).next().stop().slideToggle();
+    });
+}
 
 
 var scrollTopRatio;
@@ -97,10 +119,10 @@ $(window).on('scroll', function () {
 $(document).ready(function () {
   $('.project-list > li').hover(
       function () {
-          $(this).addClass('hover'); // 마우스 올리면 hover 클래스 추가
+          $(this).addClass('hover');
       }, 
       function () {
-          $(this).removeClass('hover'); // 마우스 내리면 hover 클래스 제거
+          $(this).removeClass('hover');
       }
   );
 });

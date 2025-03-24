@@ -38,8 +38,9 @@ header .header_inner .nav_wrap ul > li > a{
     font-weight: 400; font-size: 18px; display: block; line-height: 80px; padding-right: 70px;
     white-space: nowrap; transition: 0.2s ease-in; margin-bottom: 15px;
 }
-header .header_inner .nav_wrap ul > li:hover > a{
-    color: var(--ss06); transition: 0.2s ease-in; background-size: 0% 1px; font-weight: 500;
+header .header_inner .nav_wrap ul > li:hover > a,
+header .header_inner .nav_wrap ul > li > a.hover{
+    color: var(--ss06); transition: 0.2s ease-in; font-weight: 500;
 }
 header .header_inner .nav_wrap ul > li ol{
     display: none;
@@ -182,16 +183,4 @@ footer > div:last-of-type .moreBtn02:hover::after{
     .nav_m{
         display: none;
     }
-}
-@keyframes maskFill {
-	0% {transform: translate(0,100%);}
-	100% {transform: translate(0,0%);}
-}
-@keyframes maskWidth {
-	0% {width: 100%;}
-	100% {width: 0px;}
-}
-@keyframes projecShow {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
 }
