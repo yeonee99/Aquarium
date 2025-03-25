@@ -75,7 +75,7 @@
 [class^='guidancePage']>*:not(.bgBox),
 [class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
 [class^='friend']>*:not(.bgBox,.infoPart),
-[class^='programPage'] >*:not(.bgBox){
+[class^='programPage'] >*:not(.bgBox,.mealPart02){
     padding: 0 12.5%;
 }
 .titleBox{
@@ -707,14 +707,13 @@ p.line::after{
     display: flex; flex-direction: row; gap: 24px;
 }
 .friendmainBox > div:nth-of-type(2) div ul li div{
-   box-shadow: 0px 6px 13px 1px rgba(156,156,156,0.2); border-radius: 15px; overflow: hidden;
+   box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2); border-radius: 15px; overflow: hidden; transition: 0.5s;
 }
 .friendmainBox > div:nth-of-type(2) div ul li div span{
     padding: 35px 30px; display: block; box-sizing: border-box;
 }
-.friendmainBox > div:nth-of-type(2) div ul li:hover a::after{
-    background-color: rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; display: block; z-index: 555;
-    width: 100%; height: 100%;
+.friendmainBox > div:nth-of-type(2) div ul li:hover div{
+    box-shadow: 0px 6px 16px 5px rgba(61, 61, 61, 0.3); transition: 0.5s;
 }
 .friendmainBox > div:nth-of-type(2) div ul li b{
     font-size: 25px; line-height: 30px; font-weight: 500; margin-bottom: 5px; display: block;
@@ -959,14 +958,17 @@ p.line::after{
 [class^='programPage'] .textType02 dl div >*{
     font-size: 18px; line-height: 28px; font-weight: 500; display: inline-block;
 }
+[class^='programPage']:not(.programPage03) .textType02 dl dt{
+     min-width: 90px;
+}
 [class^='programPage'] .textType02 dl dt{
-    color: var(--subtxt); min-width: 90px;
+    color: var(--subtxt);
 }
 [class^='programPage'] .textType02 dl dd{
     margin-left: 5px;
 }
-[class^='programPage'] .bluePoint{
-    margin-top: 25px;
+[class^='programPage']:not(.programPage03) .bluePoint{
+    margin-top: 45px;
 }
 [class^='programPage']:not(.programPage03) > div:nth-of-type(2) > div:not(:last-of-type){
     margin-bottom: 150px;
@@ -984,11 +986,35 @@ p.line::after{
     float: left; width: 32.222%; margin-left: 17.778%;
 }
 .programPage03 .aquaristPart01 .bluePoint{
-    margin-bottom: 100px; 
+    margin-bottom: 100px; margin-top: 25px;
 }
 .programPage03 .aquaristPart01 a.waterBtn{
     display: block; text-align: center; background-color: var(--bs10); line-height: 50px;
     font-size: 18px; font-weight: 400;
+}
+.programShow01 > div{
+    display: flex; gap: 1.666%;
+}
+.programShow01 > div .textType02{
+    width: 32.222%;
+}
+.programShow01 > div .textType02+div{
+    flex-grow: 1; width: 66.111%;
+}
+.programShow01 .slideType04{
+    overflow-x: scroll; white-space: nowrap;
+}
+.programShow01 .slideType04 li{
+    display: inline-block;
+}
+.programShow01 .slideType04 li:not(:first-of-type){
+    margin-left: 1.666%;
+}
+.programShow01 .slideType04 li img{
+    max-width: 586px;
+}
+.mealPart02{
+    padding: 150px 12.5%; background-color: var(--bg01); margin-bottom: 200px;
 }
 .mealPart02 b{
     font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 25px;
@@ -998,11 +1024,39 @@ p.line::after{
     width: 24px; height: 30px; vertical-align: text-top; margin-right: 10px;
 }
 .mealPart02 table{
-    width: 100%;
+    width: 100%; text-align: center;
 }
 .mealPart02 table thead{
-    background-color: var(--ss10); line-height: 50px;
+    background-color: var(--ss10); line-height: 50px; border: 1px solid var(--grey03);
 }
+.mealPart02 table thead tr th{
+    width: 11.111%; font-size: 20px; font-weight: 600; color: var(--subtxt);
+}
+.mealPart02 table thead tr th:first-of-type{
+    opacity: 0;
+}
+.mealPart02 table thead tr th:not(:last-of-type){
+    border-right: 1px solid var(--grey03);
+}
+.mealPart02 table tbody tr{
+    border-width:0px 1px 1px; border-color: var(--grey03); border-style: solid;
+}
+.mealPart02 table tbody tr td:first-of-type{
+    font-size: 20px; font-weight: 600; min-width: 160px;
+}
+.mealPart02 table tbody tr td:not(:last-of-type){
+    border-right: 1px solid var(--grey03);
+}
+.mealPart02 table tbody tr td{
+    font-size: 18px; line-height: 28px; font-weight: 500; color: var(--subtxt); padding: 23px 0; vertical-align: middle;
+    background-color: var(--white01);
+}
+.mealPart02 table tbody tr td.dayoff{
+    background-color: var(--bg01);
+}
+
+
+
 .custom-button-prev, .custom-button-next {
     position: absolute;
     top: 50%;
