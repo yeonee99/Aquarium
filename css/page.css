@@ -21,6 +21,9 @@
 .bgBox{
     margin-bottom: 200px; height: 100vh; background-repeat: no-repeat; background-position: top; background-size: cover;
 }
+.greybg{
+    background-color: var(--bg01);
+}
 [class^='guidancePage'] .bgBox{
     background-image: url(../img/bg/guidance_bg.jpg);
 }
@@ -69,13 +72,17 @@
 .koreaBox .bgBox{
     background-image: url(../img/bg/korea_bg.jpg);
 }
+[class^="passPage"] .bgBox{
+    background-image: url('../img/bg/ticket_bg.jpg');
+}
 [class^='programPage'] .bgBox{
     background-image: url(../img/bg/program_bg.jpg);
 }
 [class^='guidancePage']>*:not(.bgBox),
 [class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
 [class^='friend']>*:not(.bgBox,.infoPart),
-[class^='programPage'] >*:not(.bgBox,.mealPart02){
+[class^='programPage'] >*:not(.bgBox,.mealPart02),
+[class^='passPage'] >*:not(.bgBox){
     padding: 0 12.5%;
 }
 .titleBox{
@@ -1076,4 +1083,52 @@ p.line::after{
   
   .custom-button-next {
     right: -40px;
+  }
+  [class^='passPage'] .title01{
+    margin-bottom: 70px;
+  }
+  [class^='passPage'] .title01 b{
+    font-size: 35px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 25px; 
+  }
+  [class^='passPage'] .title01 p{
+    font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt);
+  }
+  [class^='passPage'] .title02 b{
+    font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 20px;
+  }
+  [class^='passPage'] .title02 ul li{
+    font-size: 18px; line-height: 24px; font-weight: 400; color: var(--subtxt);
+  }
+  [class^='passPage'] .title02 ul li:not(:last-of-type){
+    margin-bottom: 5px;
+  }
+  .passPage02 .yearPassPart02{
+    display: flex; gap: 24px; margin-bottom: 200px;
+  }
+  .passPage02 .yearPassPart02 img{
+    max-width: 708px;
+  }
+  .passPage02 .yearPassPart02 > div{
+    padding: 30px 40px; box-sizing: border-box;
+  }
+  .passPage02 .yearPassPart02 > div ul{
+    margin-bottom: 45px;
+  }
+  .passPage02 .yearPassPart02 > div .bluePoint{
+    font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt);
+  }
+  .passPage02 .yearPassPart03{
+    padding: 150px 12.5%; display: flex;
+  }
+  .passPage02 .yearPassPart03 span small{
+    font-size: 13px; color: var(--sub02txt); font-weight: 400; line-height: 20px; display: block;
+  }
+  .passPage02 .yearPassPart03 div{
+    display: flex; flex-direction: row; gap: 24px; width: 100%;
+  }
+  .passPage02 .yearPassPart03 div ul li span:first-of-type{
+    border: 1px solid #e8e8e8;
+  }
+  .passPage02 .yearPassPart03 div ul li span:first-of-type img{
+    max-width: 200px;
   }
