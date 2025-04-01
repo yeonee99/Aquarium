@@ -1,11 +1,13 @@
   $(function(){
     slick('.slideType03');
+    slick02('.mainPart01');
     headerH('header .gnb_list');
     tabUI(".newsTab li",".mainPart05 > div");
     tabUI(".tabMenu01 li",".direcPart02 > div");
     hoverE('.mainPart02 ul > li');
     toggleDown('.accoType01 li b');
     filter('.noticeMenu li');
+    noticeFilter(".passPage01 [class^='normal'] ul li > div div a");
   })
 
   function slick(target){
@@ -17,6 +19,16 @@
         prevArrow : $('.prevArrow'), 
         nextArrow : $('.nextArrow'),
         draggable : false
+    });
+  }
+  function slick02(target){
+    $(target).slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite : true, 
+        autoplay: true,
+        prevArrow : $('.prevArr'), 
+        nextArrow : $('.nextArr')
     });
   }
 
@@ -75,6 +87,12 @@ function toggleDown(targetC) {
     $(targetC).click(function () {
         $(this).next().stop().slideToggle();
     });
+}
+
+function noticeFilter(targetBtn){
+    $(targetBtn).click(function(){
+        alert("서비스 제공 예정입니다.")
+    })
 }
 
 
