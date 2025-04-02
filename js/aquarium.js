@@ -1,6 +1,6 @@
   $(function(){
     slick('.slideType03');
-    slick02('.mainPart01');
+    slick02('.mainSlide01');
     headerH('header .gnb_list');
     tabUI(".newsTab li",".mainPart05 > div");
     tabUI(".tabMenu01 li",".direcPart02 > div");
@@ -21,16 +21,26 @@
         draggable : false
     });
   }
-  function slick02(target){
-    $(target).slick({
+
+  function slick02(targetSlide) {
+    $(targetSlide).on('init beforeChange', function(event, slick, currentSlide, nextSlide) {
+        var totalSlides = slick.slideCount;
+        var progress = ((nextSlide !== undefined ? nextSlide : 0) + 1) / totalSlides;
+        $('.progressbar_fill').css('transform', 'scaleX(' + progress + ')');
+    });
+
+    $(targetSlide).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite : true, 
+        infinite: true,
         autoplay: true,
-        prevArrow : $('.prevArr'), 
-        nextArrow : $('.nextArr')
+        autoplaySpeed: 2000,
+        speed: 800,
+        prevArrow: $('.prevArr'),
+        nextArrow: $('.nextArr')
     });
-  }
+}
+
 
   function headerH(targetA) {
     $(targetA).on('mouseenter', function(){
@@ -156,5 +166,21 @@ document.addEventListener("DOMContentLoaded", function () {
   
     document.querySelector(".custom-button-prev").addEventListener("click", function () {
       swiper.slidePrev();
+    });
+  });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const slide = new Swiper('.slideType05', {
+      slidesPerView: 1.6,
+      spaceBetween: 0,
+      loop: false,
+      pagination: false,
+      observer: true,
+      observeParents: true,
+      grabCursor: true,
+      freeMode: true,
+      simulateTouch: true,
+      touchReleaseOnEdges: true
     });
   });
