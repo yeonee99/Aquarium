@@ -81,7 +81,8 @@
 [class^='guidancePage']>*:not(.bgBox),
 [class^='customerPage']>*:not(.bgBox,.noticetitleWrap,.noticeBox),
 [class^='friend']>*:not(.bgBox,.infoPart),
-[class^='programPage'] >*:not(.bgBox,.mealPart02),
+[class^='programPage'] .mealPart02,
+[class^='programPage'] .programShow01 >*:not(.greybg),
 [class^='passPage'] >*:not(.bgBox){
     padding: 0 12.5%;
 }
@@ -640,6 +641,10 @@ p.line::after{
 .customerPage03 .formBox fieldset div > input[type='submit']{
     position: absolute; bottom: 55px; right: 55px; width: 100%; max-width: 194px; height: 44px; border: 1px solid var(--grey01);
     cursor: pointer; background-color: var(--white01); font-size: 15px; font-weight: 400; line-height: 18px; text-align: center;
+    transition: 0.5s;
+}
+.customerPage03 .formBox fieldset div > input[type='submit']:hover{
+    border-color: var(--ss06); transition: 0.5s; font-weight: 600; color: var(--ss05);
 }
 .customerPage03 .formBox fieldset div label,
 .customerPage03 .formBox fieldset div > span span{
@@ -1006,6 +1011,9 @@ p.line::after{
 [class^='programPage']:not(.programPage03) > div:nth-of-type(2){
     margin-bottom: 200px;
 }
+.programPage03 .aquaristPart01{
+    margin-bottom: 250px;
+}
 .programPage03 .aquaristPart01 > div::after{
     display: block; content: ''; clear: both;
 }
@@ -1013,25 +1021,90 @@ p.line::after{
     float: left; width: 50%;
 }
 .programPage03 .aquaristPart01 > div .textType02{
-    float: left; width: 32.222%; margin-left: 17.778%;
+    float: left; width: 34.222%; margin-left: 15.778%;
 }
 .programPage03 .aquaristPart01 .bluePoint{
     margin-bottom: 100px; margin-top: 25px;
 }
-.programPage03 .aquaristPart01 a.waterBtn{
-    display: block; text-align: center; background-color: var(--bs10); line-height: 50px;
-    font-size: 18px; font-weight: 400;
+
+
+
+.svgBubble{
+    width: 0; height: 0;
 }
-.programShow01 > div{
+.waterBtn{
+    display: block; text-align: center; background-color: var(--bs10); line-height: 50px;
+    font-size: 18px; font-weight: 400; transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;
+    z-index: 1; position: relative;
+}
+.waterBtn:hover{
+    color: var(--white01);
+}
+.waterBtn .btn_inner_wrap{
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;
+}
+.waterBtn .btn_inner_wrap .bubbleWrap{
+    position: relative; display: block; height: 100%; filter: url('#bubble');
+}
+.waterBtn .btn_inner_wrap .bubbleWrap .inner_bubble{
+    position: absolute; top: 6px; width: 25%; height: 100%;
+    background-color: #95D6FE; transform: translate(0,150%,0) scale(1.7);
+    transition: transform 0.45s; border-radius: 100%;
+}
+@supports (filter: url('#bubble')) {
+    .inner_bubble {
+        transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+}
+
+/* 개별적인 위치 및 transition-delay 설정 */
+.inner_bubble:nth-of-type(1) {
+    left: 0%;
+}
+
+.inner_bubble:nth-of-type(2) {
+    left: 30%;
+}
+
+.inner_bubble:nth-of-type(3) {
+    left: 60%;
+}
+
+.inner_bubble:nth-of-type(4) {
+    left: 90%;
+}
+.waterBtn:hover .inner_bubble:nth-of-type(1) {
+    transform: translateZ(0) scale(1.7);
+    transition-delay: 0s;
+}
+
+.waterBtn:hover .inner_bubble:nth-of-type(2) {
+    transform: translateZ(0) scale(1.7);
+    transition-delay: 0.08s;
+}
+
+.waterBtn:hover .inner_bubble:nth-of-type(3) {
+    transform: translateZ(0) scale(1.7);
+    transition-delay: 0.16s;
+}
+
+.waterBtn:hover .inner_bubble:nth-of-type(4) {
+    transform: translateZ(0) scale(1.7);
+    transition-delay: 0.24s;
+}
+
+.programShow01 > div:not(.greybg),.programShow01 .greybg > div{
     display: flex; gap: 1.666%;
 }
-.programShow01 > div .textType02{
+.programShow01 .textType02{
     width: 32.222%;
 }
 .programShow01 > div .textType02+div{
     flex-grow: 1; width: 66.111%;
 }
-
+.programShow01 .greybg > div{
+    padding: 150px 12.5%;
+}
 
 .swiper-container {
     overflow: hidden;  width: 100%; position: relative;
@@ -1066,7 +1139,7 @@ p.line::after{
 
 
 .mealPart02{
-    padding: 150px 12.5%; background-color: var(--bg01); margin-bottom: 200px;
+    padding: 150px 12.5%; margin-bottom: 200px;
 }
 .mealPart02 b{
     font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 25px;
@@ -1106,28 +1179,15 @@ p.line::after{
 .mealPart02 table tbody tr td.dayoff{
     background-color: var(--bg01);
 }
-
-
-
 .custom-button-prev, .custom-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
-    transition: opacity 0.3s ease;
+    position: absolute; top: 50%;  transform: translateY(-50%); width: 5.6%; height: 40px;
+    background: url(../img/icon/arrow_two.png) no-repeat center / contain; cursor: pointer;
   }
-  
   .custom-button-prev {
-    left: -40px;
+    transform: rotate(180deg) translateY(50%); left: -8.222%; opacity: 0.3;
   }
-  
   .custom-button-next {
-    right: -40px;
+    right: -12.6%;
   }
   [class^='passPage'] .title01{
     margin-bottom: 70px;
