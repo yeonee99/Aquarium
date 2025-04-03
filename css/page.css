@@ -83,6 +83,7 @@
 [class^='friend']>*:not(.bgBox,.infoPart),
 [class^='programPage'] .mealPart02,
 [class^='programPage'] .programShow01 >*:not(.greybg),
+.programPage03 .aquaristPart01,
 [class^='passPage'] >*:not(.bgBox){
     padding: 0 12.5%;
 }
@@ -136,12 +137,6 @@ p.line::after{
     font-size: 18px; line-height: 32px; font-weight: 400; background-color: var(--bg01); padding: 40px;
     border-top: 1px solid var(--bg01); display: none; color: var(--subtxt);
 }
-/* .slideType01{
-    position: relative;
-}
-.slideType01 ul li{
-    width: 15.27%; display: inline-block;
-} */
 .slideType01 ul li:not(:first-of-type){
     margin-left: 1.666%;
 }
