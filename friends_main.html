@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/import.css">
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/aquarium.js"></script>
 </head>
 <body>
@@ -147,77 +150,75 @@
                 <span>!</span>
                 <p>해당 전시관을 클릭하시면 해당 전시의 상세 정보를 확인하실 수 있습니다</p>
             </div>
-            <ul>
-                <li>
-                    <a href="aquarium_rainbow.html">
-                        <img src="img/thumb/map_rainbow.jpg" alt="">
-                        <span>무지개 라운지</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_korea.html">
-                        <img src="img/thumb/map_korea.jpg" alt="">
-                        <span>한국의 정원</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_deepBlue.html">
-                        <img src="img/thumb/map_deep.jpg" alt="">
-                        <span>딥블루 광장</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_flower.html">
-                        <img src="img/thumb/map_flower.jpg" alt="">
-                        <span>심해의 화원</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_ourFish.html">
-                        <img src="img/thumb/map_our.jpg" alt="">
-                        <span>우리터 우리물고기</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_marine.html">
-                        <img src="img/thumb/map_marine.jpg" alt="">
-                        <span>마린터치 연구소</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_beach.html">
-                        <img src="img/thumb/map_beach.jpg" alt="">
-                        <span>맹그로브와 해변</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_amjonia.html">
-                        <img src="img/thumb/map_ama.jpg" alt="">
-                        <span>아마조니아 월드</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_art.html">
-                        <img src="img/thumb/map_art.jpg" alt="">
-                        <span>산호 미술관</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_sea.html">
-                        <img src="img/thumb/map_sea.jpg" alt="">
-                        <span>해저터널</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="aquarium_kingdom.html">
-                        <img src="img/thumb/map_king.jpg" alt="">
-                        <span>바다왕국</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="swiperScrollbar">
-                <div class="grLine"></div>
-                <div class="indi"></div>
+            <div class="swiper-container thema_slide">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="aquarium_rainbow.html">
+                            <img src="img/thumb/map_rainbow.jpg" alt="">
+                            <span>무지개 라운지</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_korea.html">
+                            <img src="img/thumb/map_korea.jpg" alt="">
+                            <span>한국의 정원</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_deepBlue.html">
+                            <img src="img/thumb/map_deep.jpg" alt="">
+                            <span>딥블루 광장</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_flower.html">
+                            <img src="img/thumb/map_flower.jpg" alt="">
+                            <span>심해의 화원</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_ourFish.html">
+                            <img src="img/thumb/map_our.jpg" alt="">
+                            <span>우리터 우리물고기</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_marine.html">
+                            <img src="img/thumb/map_marine.jpg" alt="">
+                            <span>마린터치 연구소</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_beach.html">
+                            <img src="img/thumb/map_beach.jpg" alt="">
+                            <span>맹그로브와 해변</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_amjonia.html">
+                            <img src="img/thumb/map_ama.jpg" alt="">
+                            <span>아마조니아 월드</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_art.html">
+                            <img src="img/thumb/map_art.jpg" alt="">
+                            <span>산호 미술관</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_sea.html">
+                            <img src="img/thumb/map_sea.jpg" alt="">
+                            <span>해저터널</span>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="aquarium_kingdom.html">
+                            <img src="img/thumb/map_king.jpg" alt="">
+                            <span>바다왕국</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         </section>

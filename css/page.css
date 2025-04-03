@@ -136,15 +136,12 @@ p.line::after{
     font-size: 18px; line-height: 32px; font-weight: 400; background-color: var(--bg01); padding: 40px;
     border-top: 1px solid var(--bg01); display: none; color: var(--subtxt);
 }
-.slideType01{
+/* .slideType01{
     position: relative;
 }
-.slideType01 ul{
-    overflow: scroll; white-space: nowrap; scrollbar-width: none; margin-bottom: 35px; font-size: 0;
-}
 .slideType01 ul li{
-     width: 15.27%; display: inline-block;
-}
+    width: 15.27%; display: inline-block;
+} */
 .slideType01 ul li:not(:first-of-type){
     margin-left: 1.666%;
 }
@@ -831,7 +828,7 @@ p.line::after{
 }
 .friendBox > div:last-of-type{
     position: relative; background-repeat: no-repeat; background-position: center; background-size: contain; height: 100vh;
-    margin-bottom: 250px; background-attachment: fixed;
+    background-attachment: fixed;
 }
 .friendBox > div:last-of-type div{
     position: absolute; 

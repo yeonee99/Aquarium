@@ -184,3 +184,19 @@ document.addEventListener("DOMContentLoaded", function() {
       touchReleaseOnEdges: true
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const slide = new Swiper('.thema_slide', {
+      slidesPerView: 6,
+      spaceBetween: 0,
+      loop: true,
+      pagination: false,
+      observer: true,
+      observeParents: true,
+      grabCursor: true,
+      freeMode: true,
+      simulateTouch: true,
+      touchReleaseOnEdges: true
+    });
+  });
+
