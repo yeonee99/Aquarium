@@ -554,11 +554,13 @@ p.line::after{
     border-top: 1px solid var(--grey01);
 }
 .customerPage01 div > div > ul li{
-    border-bottom: 1px solid var(--grey03); cursor: pointer; display: flex; flex-direction: row; align-items: center;
-    padding: 0 25px;
+    border-bottom: 1px solid var(--grey03); cursor: pointer; padding: 0 25px;
 }
 .customerPage01 div > div > ul li:hover{
     background-color: var(--bg01);
+}
+.customerPage01 div > div > ul li a{
+    display: block; display: flex; flex-direction: row; align-items: center;
 }
 .customerPage01 div > div > ul li:hover span{
     border-color: var(--ss06); color: var(--ss06); transition: ease-in 0.2s;
