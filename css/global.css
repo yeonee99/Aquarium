@@ -8,175 +8,341 @@ li {
 a {
     text-decoration: none; color: var(--maintxt);
 }
-img{display: block; width: 100%;}
+@media screen and (min-width:1280px) {
+    img{
+        display: block; width: 100%;
+    }
+    header{
+        height: 80px; position: fixed; top:0; left: 0; z-index: 999; transition: top 0.5s ease-in-out; width: 100%;
+    }
+    header .header_inner aside,.navbg{
+        display: none;
+    }
+    header .header_inner{
+        display: flex; height: 100%; padding-left: 6.25%; padding-right: 6.25%; flex-direction: row; justify-content: space-between;
+        position: relative; z-index: 99;
+    }
+    header .header_inner h1{
+        width: 100%; max-width: 155px; height: 80px;
+    }
+    header .header_inner h1 a{
+        display: flex; align-items: center; height: 100%;
+    }
+    header .header_inner .nav_wrap{
+        display: flex; flex-direction: row;
+    }
+    header .header_inner .nav_wrap ul{
+        display: flex; flex-direction: row;
+    }
+    header .header_inner .nav_wrap ul > li{
+        flex: 1;
+    }
+    header .header_inner .nav_wrap ul > li:not(:first-of-type){
+        margin-left: 15px;
+    }
+    header .header_inner .nav_wrap ul > li > a{
+        font-weight: 400; font-size: 18px; display: block; line-height: 80px; padding-right: 70px;
+        white-space: nowrap; transition: 0.2s ease-in; margin-bottom: 15px;
+    }
+    header .header_inner .nav_wrap ul > li:hover > a,
+    header .header_inner .nav_wrap ul > li > a.hover{
+        color: var(--ss06); transition: 0.2s ease-in; font-weight: 500;
+    }
+    header .header_inner .nav_wrap ul > li ol{
+        display: none;
+    }
+    header .header_inner .nav_wrap ul > li ol > li a{
+        font-size: 16px; font-weight: 400; position: relative; display: inline-block;
+        transition: background-size 0.3s ease-in-out; padding-bottom: 2px;
+        background-image: linear-gradient(var(--ss06), var(--ss06)); background-repeat: no-repeat;
+        background-position: left bottom; background-size: 0% 1px;
+    }
+    header .header_inner .nav_wrap ul > li ol > li a:hover{
+        transition: 0.2s ease-in; position: relative;background-image: linear-gradient(var(--ss06), var(--ss06));
+        background-repeat: no-repeat;background-position: left 0 bottom 0;background-size: 0 1px;
+        transition: background-size 0.3s;transition-timing-function: ease-out; background-size: 100% 1px;
+    }
+    header .header_inner .nav_wrap ul > li ol > li:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    header .header_inner > span{
+        line-height: 80px;
+    }
+    header .header_inner span {
+        display: block; width: 100%; max-width: 100px;
+    }
+    header .header_inner span ul li{display: inline-block;}
+    header .header_inner span ul li:first-of-type a{
+        font-size: 16px; font-weight: 400; color: var(--maintxt); background: url('../img/icon/person.png') no-repeat left; background-size: 15px; padding-left: 22px;
+    }
+    header .header_inner span ul li:last-of-type a{
+        content: ''; display: inline-block; background: url('../img/icon/global.png') no-repeat; background-size: 100%; width: 16px;
+        height: 16px; vertical-align: middle; margin-left: 10px;
+    }
+    header.nav-hover{
+        transition: 0.5s ease-in-out;
+    }
+    header.nav-hover .header_inner .nav_wrap ul > li ol{
+        display: block; animation: navShow 0.3s ease 0.1s both;
+    }
+    @keyframes navShow {
+        0% {opacity: 0; visibility: hidden;}
+        100% {opacity: 1; visibility: visible;}
+    }
+    header .navBg{
+        width: 100%; background-color: var(--white01); height: 80px; position: absolute; top: 0; left: 0; z-index: 1;
+        transition: 0.2s ease-in; box-shadow: 0px 4px 11px -1px rgba(0,0,0,0.027);
+    }
+    section{
+        padding-top: 80px;
+    }
+    footer{
+        background-color: var(--bs02); color: var(--white01); padding: 100px 6.25%;
+    }
+    footer::after{
+        content: ''; display: block; clear: both;
+    }
+    footer > div{
+        float: left;
+    }
+    footer > div:first-of-type{
+        width: 32.38%;
+    }
+    footer h1{
+        margin-bottom: 35px;
+    }
+    footer h1 a img{
+        max-width: 210px; width: 100%;
+    }
+    footer > div:first-of-type ul:first-of-type{
+        margin-bottom: 10px;
+    }
+    footer > div:first-of-type ul:first-of-type li{
+        font-size: 13px; font-weight: 300; line-height: 20px; color: var(--grey03);
+    }
+    footer > div:first-of-type > ul:first-of-type li:nth-of-type(2):after,
+    footer > div:first-of-type > ul:first-of-type li:nth-of-type(3):after,
+    footer > div:first-of-type > ul:first-of-type li:nth-of-type(5):after{
+        content: '|'; display: inline-block; margin: 0 5px 0 10px;
+    }
+    footer > div:first-of-type ul:first-of-type br:first-of-type{
+        display: none;
+    }
+    footer > div:first-of-type ul:first-of-type li:not(:last-of-type){
+        margin-bottom: 5px;
+    }
+    footer > div:first-of-type ul:first-of-type li:not(:first-of-type){
+        display: inline-block;
+    }
+    footer > div:first-of-type ol{
+        margin-bottom: 25px;
+    }
+    footer > div:first-of-type ol li{
+        font-size: 12px; font-weight: 400; line-height: 20px; color: var(--white01); display: inline-block; cursor: pointer;
+    }
+    footer > div:first-of-type ol li:not(:first-of-type){
+        margin-left: 10px;
+    }
+    footer > div:first-of-type ol li:nth-of-type(2){
+        color: var(--gs01);
+    }
+    footer > div:first-of-type ul:last-of-type li{
+        display: inline-block;
+    }
+    footer > div:first-of-type ul:last-of-type li:last-of-type{
+        vertical-align: super;
+    }
+    footer > div:first-of-type ul:last-of-type li:not(:first-of-type){
+        margin-left: 20px;
+    }
+    footer > div:first-of-type ul:last-of-type li img{
+        width: 100%; max-height: 25px;
+    }
+    footer > div:last-of-type{
+        width: 57.738%; margin-left: 9.837%;
+    }
+    footer > div:last-of-type ul{
+        display: flex; flex-direction: row; justify-content: space-around; margin-bottom: 30px;
+    }
+    footer > div:last-of-type ul > li span{
+        font-size: 18px; line-height: 28px; font-weight: 600; margin-bottom: 20px; display: block;
+    }
+    footer > div:last-of-type ul > li ol li a{
+        font-size: 15px; line-height: 18px; font-weight: 400; color: #bebebe; margin-bottom: 15px; display: block; transition: 0.5s;
+    }
+    footer > div:last-of-type ul > li ol li a:hover{
+        color: var(--white01); transition: 0.2s;
+    }
+    footer > div:last-of-type .moreBtn02{   
+        color: var(--white01); font-size: 12px; line-height: 15px; font-weight: 400; transition: 0.5s; padding-left: 60px;
+    }
+    footer > div:last-of-type .moreBtn02:after{
+        transition: 0.5s; content: ""; width: 14px; height: 15px; display: inline-block; background: url(../img/icon/arrow_wh.png) no-repeat;
+        background-size: 100%; vertical-align: middle; opacity: 0;
+    }
+    footer > div:last-of-type .moreBtn02:hover::after{
+        margin-left: 5px; opacity: 1; transition: 0.5s;
+    }
 
-header{
-    height: 80px; position: fixed; top:0; left: 0; z-index: 999; transition: top 0.5s ease-in-out; width: 100%;
 }
-header .header_inner{
-    display: flex; height: 100%; padding-left: 6.25%; padding-right: 6.25%; flex-direction: row; justify-content: space-between;
-    position: relative; z-index: 99;
-}
-header .header_inner h1{
-    width: 100%; max-width: 155px; height: 80px;
-}
-header .header_inner h1 a{
-    display: flex; align-items: center; height: 100%;
-}
-header .header_inner .nav_wrap{
-    display: flex; flex-direction: row;
-}
-header .header_inner .nav_wrap ul{
-    display: flex; flex-direction: row;
-}
-header .header_inner .nav_wrap ul > li{
-    flex: 1;
-}
-header .header_inner .nav_wrap ul > li:not(:first-of-type){
-    margin-left: 15px;
-}
-header .header_inner .nav_wrap ul > li > a{
-    font-weight: 400; font-size: 18px; display: block; line-height: 80px; padding-right: 70px;
-    white-space: nowrap; transition: 0.2s ease-in; margin-bottom: 15px;
-}
-header .header_inner .nav_wrap ul > li:hover > a,
-header .header_inner .nav_wrap ul > li > a.hover{
-    color: var(--ss06); transition: 0.2s ease-in; font-weight: 500;
-}
-header .header_inner .nav_wrap ul > li ol{
-    display: none;
-}
-header .header_inner .nav_wrap ul > li ol > li a{
-    font-size: 16px; font-weight: 400; position: relative; display: inline-block;
-    transition: background-size 0.3s ease-in-out; padding-bottom: 2px;
-    background-image: linear-gradient(var(--ss06), var(--ss06)); background-repeat: no-repeat;
-    background-position: left bottom; background-size: 0% 1px;
-}
-header .header_inner .nav_wrap ul > li ol > li a:hover{
-    transition: 0.2s ease-in; position: relative;background-image: linear-gradient(var(--ss06), var(--ss06));
-    background-repeat: no-repeat;background-position: left 0 bottom 0;background-size: 0 1px;
-    transition: background-size 0.3s;transition-timing-function: ease-out; background-size: 100% 1px;
-}
-header .header_inner .nav_wrap ul > li ol > li:not(:last-of-type){
-    margin-bottom: 25px;
-}
-header .header_inner > span{
-    line-height: 80px;
-}
-header .header_inner span {
-    display: block; width: 100%; max-width: 100px;
-}
-header .header_inner span ul li{display: inline-block;}
-header .header_inner span ul li:first-of-type a{
-    font-size: 16px; font-weight: 400; color: var(--maintxt); background: url('../img/icon/person.png') no-repeat left; background-size: 15px; padding-left: 22px;
-}
-header .header_inner span ul li:last-of-type a{
-    content: ''; display: inline-block; background: url('../img/icon/global.png') no-repeat; background-size: 100%; width: 16px;
-    height: 16px; vertical-align: middle; margin-left: 10px;
-}
-header.nav-hover{
-    transition: 0.5s ease-in-out;
-}
-header.nav-hover .header_inner .nav_wrap ul > li ol{
-    display: block; animation: navShow 0.3s ease 0.1s both;
-}
-@keyframes navShow {
-	0% {opacity: 0; visibility: hidden;}
-	100% {opacity: 1; visibility: visible;}
-}
-header .navBg{
-    width: 100%; background-color: var(--white01); height: 80px; position: absolute; top: 0; left: 0; z-index: 1;
-    transition: 0.2s ease-in; box-shadow: 0px 4px 11px -1px rgba(0,0,0,0.027);
-}
+@media screen and (min-width:768px) and (max-width:1279px){
+    img{
+        display: block; width: 100%;
+    }
+    header{
+        height: 80px; position: fixed; top:0; left: 0; z-index: 999; transition: top 0.5s ease-in-out; width: 100%;
+        background-color: var(--white01);
+    }
+    header .header_inner{
+        display: flex; height: 100%; padding-left: 3.125%; padding-right: 3.125%; flex-direction: row; justify-content: space-between;
+        position: relative; z-index: 99; align-items: center
+    }
+    header .header_inner h1{
+        width: 100%; max-width: 155px; height: 80px;
+    }
+    header .header_inner h1 a{
+        display: flex; align-items: center; height: 100%;
+    }
+    header .header_inner .nav_m{
+        background: url('../img/icon/ham_menu.png') no-repeat center; width: 25px; height: 25px;
+        display: block; margin-left: 10px; background-size: contain; cursor: pointer;
+    }
+    header .header_inner > nav,
+    header .header_inner > span{
+        display: none;
+    }
+    header .header_inner .navbg{
+        width: 100%; height: 100vh; background-color: rgba(0,0,0,0.2);
+        content: ""; position: fixed; top: 0; left: 0; z-index: 1; display: none;
+    }
+    header .header_inner aside.nav-on{
+        display: block;
+    }
+    header .header_inner aside{
+        background-color: var(--white01); position: fixed; right: 0; top: 0; height: 100vh; width: 100%; display: none;
+        max-width: 560px; z-index: 2; padding: 40px 60px; box-sizing: border-box; box-shadow: -10px 4px 36px 0px rgba(0,0,0,0.25);
+    }
+    header .header_inner aside > ul{
+        margin-bottom: 70px;
+    }
+    header .header_inner aside > ul li:first-of-type a{
+        font-size: 18px; line-height: 20px; background: url('../img/icon/person.png') no-repeat left; background-size: 15px; padding-left: 22px;
+    }
+    header .header_inner aside > ul li a.closeBtn{
+        position: absolute; top: 40px; right: 60px;
+        color: transparent; background: url('../img/icon/close.png') no-repeat center; background-size: contain; width: 20px; height: 20px;
+    }
+    header .header_inner aside nav ul{
+        margin-bottom: 70px;
+    }
+    header .header_inner aside nav ul > li > a{
+        font-size: 18px; font-weight: 500; line-height: 55px; display: block; position: relative; transition: 0.3s;
+    }
+    header .header_inner aside nav ul > li > a::after{
+        content: ''; background: url('../img/icon/arrow_bk.png') no-repeat center; background-size: contain; width: 20px; height: 55px;
+        position: absolute; top: 0; right: 0; transition: 0.5s;
+    }
+    header .header_inner aside nav ul > li > a.openM{
+        color: var(--ss06); font-weight: 600; transition: 0.5s;
+    }
+    header .header_inner aside nav ul > li > a.openM:after{
+        transform: rotate(-180deg); transition: 0.5s; 
+    }
+    header .header_inner aside nav ul > li ol{
+        display: none;
+    }
+    header .header_inner aside nav ul > li ol li{
+        font-size: 15px; line-height: 20px; padding: 10px 0;
+    }
+    header .header_inner aside nav ul > li ol li a{
+        display: block;
+    }
+    header .header_inner aside nav > ol{
+        text-align: right;
+    }
+    header .header_inner aside nav > ol li{
+        font-family: var(--pop); font-size: 15px; line-height: 20px; color: var(--sub02txt); display: inline-block; cursor: pointer;
+    }
+    header .header_inner aside nav > ol li:last-of-type{
+        margin-left: 15px;
+    }
+    header .header_inner aside nav > ol li.clickOn{
+        font-weight: 500; color: var(--maintxt);
+    }
+    
+    
+    
 
-section{
-    padding-top: 80px;
-}
-footer{
-    background-color: var(--bs02); color: var(--white01); padding: 100px 6.25%;
-}
-footer::after{
-    content: ''; display: block; clear: both;
-}
-footer > div{
-    float: left;
-}
-footer > div:first-of-type{
-    width: 32.38%;
-}
-footer h1{
-    margin-bottom: 35px;
-}
-footer h1 a img{
-    max-width: 210px; width: 100%;
-}
-footer > div:first-of-type ul:first-of-type{
-    margin-bottom: 10px;
-}
-footer > div:first-of-type ul:first-of-type li{
-    font-size: 13px; font-weight: 300; line-height: 20px; color: var(--grey03);
-}
-footer > div:first-of-type > ul:first-of-type li:nth-of-type(2):after,
-footer > div:first-of-type > ul:first-of-type li:nth-of-type(3):after,
-footer > div:first-of-type > ul:first-of-type li:nth-of-type(5):after{
-    content: '|'; display: inline-block; margin: 0 5px 0 10px;
-}
-footer > div:first-of-type ul:first-of-type li:not(:last-of-type){
-    margin-bottom: 5px;
-}
-footer > div:first-of-type ul:first-of-type li:not(:first-of-type){
-    display: inline-block;
-}
-footer > div:first-of-type ol{
-    margin-bottom: 25px;
-}
-footer > div:first-of-type ol li{
-    font-size: 12px; font-weight: 400; line-height: 20px; color: var(--white01); display: inline-block; cursor: pointer;
-}
-footer > div:first-of-type ol li:not(:first-of-type){
-    margin-left: 10px;
-}
-footer > div:first-of-type ol li:nth-of-type(2){
-    color: var(--gs01);
-}
-footer > div:first-of-type ul:last-of-type li{
-    display: inline-block;
-}
-footer > div:first-of-type ul:last-of-type li:last-of-type{
-    vertical-align: super;
-}
-footer > div:first-of-type ul:last-of-type li:not(:first-of-type){
-    margin-left: 20px;
-}
-footer > div:first-of-type ul:last-of-type li img{
-    width: 100%; max-height: 25px;
-}
-footer > div:last-of-type{
-    width: 57.738%; margin-left: 9.837%;
-}
-footer > div:last-of-type ul{
-    display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 30px;
-}
-footer > div:last-of-type ul > li span{
-    font-size: 18px; line-height: 28px; font-weight: 600; margin-bottom: 20px; display: block;
-}
-footer > div:last-of-type ul > li ol li a{
-    font-size: 15px; line-height: 18px; font-weight: 400; color: #bebebe; margin-bottom: 15px; display: block; transition: 0.5s;
-}
-footer > div:last-of-type ul > li ol li a:hover{
-    color: var(--white01); transition: 0.2s;
-}
-footer > div:last-of-type .moreBtn02{   
-    color: var(--white01); font-size: 12px; line-height: 15px; font-weight: 400; transition: 0.5s;
-}
-footer > div:last-of-type .moreBtn02:after{
-    transition: 0.5s; content: ""; width: 14px; height: 15px; display: inline-block; background: url(../img/icon/arrow_wh.png) no-repeat;
-    background-size: 100%; vertical-align: middle; opacity: 0;
-}
-footer > div:last-of-type .moreBtn02:hover::after{
-    margin-left: 5px; opacity: 1; transition: 0.5s;
-}
 
+    section{
+        padding-top: 80px;
+    }
+    footer{
+        background-color: var(--bs02); color: var(--white01); padding: 80px 3.125%; position: relative;
+    }
+    footer h1{
+        margin-bottom: 30px;
+    }
+    footer h1 a{
+        display: inline-block;
+    }
+    footer h1 a img{
+        max-width: 210px; width: 100%;
+    }
+    footer > div:first-of-type ul:first-of-type{
+        margin-bottom: 10px;
+    }
+    footer > div:first-of-type ul:first-of-type li{
+        font-size: 13px; font-weight: 300; line-height: 20px; color: var(--grey03);
+    }
+    footer > div:first-of-type > ul:first-of-type li:not(:nth-of-type(1),:nth-of-type(4),:nth-of-type(7))::after{
+        content: '|'; display: inline-block; margin: 0 5px 0 10px;
+    }
+    footer > div:first-of-type ul:first-of-type li:not(:last-of-type){
+        margin-bottom: 5px;
+    }
+    footer > div:first-of-type ul:first-of-type li:not(:first-of-type){
+        display: inline-block;
+    }
+    footer > div:first-of-type ul:first-of-type br:last-of-type{
+        display: none;
+    }
+    footer > div:first-of-type ol{
+        margin-bottom: 25px;
+    }
+    footer > div:first-of-type ol li{
+        font-size: 12px; font-weight: 400; line-height: 20px; color: var(--white01); display: inline-block; cursor: pointer;
+    }
+    footer > div:first-of-type ol li:not(:first-of-type){
+        margin-left: 10px;
+    }
+    footer > div:first-of-type ol li:nth-of-type(2){
+        color: var(--gs01);
+    }
+    footer > div:first-of-type ul:last-of-type li{
+        display: inline-block;
+    }
+    footer > div:first-of-type ul:last-of-type li:last-of-type{
+        vertical-align: super;
+    }
+    footer > div:first-of-type ul:last-of-type li:not(:first-of-type){
+        margin-left: 20px;
+    }
+    footer > div:first-of-type ul:last-of-type li img{
+        width: 100%; max-height: 25px;
+    }
+    footer > div:last-of-type ul{
+        display: none;
+    }
+    footer > div:last-of-type>a{
+        color: var(--white01); position: absolute; bottom: 75px; right: 3.125%; font-size: 12px; font-weight: 500;
+        line-height: 20px; padding: 5px;
+    }
+    footer > div:last-of-type>a::after{
+        content: ""; width: 14px; height: 15px; display: inline-block; background: url(../img/icon/arrow_wh.png) no-repeat;
+        background-size: 100%; vertical-align: middle; margin-left: 5px;
+    }
+}
 
 
 

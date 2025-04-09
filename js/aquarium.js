@@ -2,12 +2,16 @@
     slick('.slideType03');
     slick02('.mainSlide01');
     headerH('header .gnb_list');
+    headerC('.nav_m');
     tabUI(".newsTab li",".mainPart05 > div");
     tabUI(".tabMenu01 li",".direcPart02 > div");
     hoverE('.mainPart02 ul > li');
     toggleDown('.accoType01 li b');
+    toggleDown02('.header_inner aside nav ul li > a');
     filter('.noticeMenu li');
     noticeFilter(".passPage01 [class^='normal'] ul li > div div a");
+    noticeFilter(".glBtn");
+    noticeFilter(".loginBtn");
   })
 
   function slick(target){
@@ -60,6 +64,14 @@
         }
     });
 }
+function headerC(targetMenu){
+    $(targetMenu).click(function(){
+        $('.header_inner aside').addClass('nav-on');
+    })
+    $('.header_inner .closeBtn').click(function(){
+      $('.header_inner aside').removeClass('nav-on');
+    })
+}
 
 function tabUI(tabMenu,tabCont){
   $(tabMenu).click(function(){
@@ -97,6 +109,13 @@ function toggleDown(targetC) {
     $(targetC).click(function () {
         $(this).next().stop().slideToggle();
     });
+}
+
+function toggleDown02(targetT) {
+  $(targetT).click(function () {
+      $(this).next().stop().slideToggle();
+      $(this).toggleClass('openM');
+  });
 }
 
 function noticeFilter(targetBtn){
