@@ -4,7 +4,7 @@
     }
     .bluePoint span{
         background-color: var(--ss05); border-radius: 20px; text-align: center; height: 20px; width: 20px;
-        color: var(--white01); font-size: 15px; font-weight: 700; line-height: 20px; margin-right: 10px;
+        color: var(--white01); font-size: 15px; font-weight: 700; line-height: 20px; margin-right: 10px; flex-shrink: 0;
     }
     .bluePoint p{
         font-size: 13px; line-height: 20px; font-weight: 300; color: var(--subtxt); max-width: 580px; word-break: keep-all;
@@ -1402,23 +1402,23 @@
     }
     .bluePoint span{
         background-color: var(--ss05); border-radius: 20px; text-align: center; height: 20px; width: 20px;
-        color: var(--white01); font-size: 15px; font-weight: 700; line-height: 20px; margin-right: 10px;
+        color: var(--white01); font-size: 15px; font-weight: 700; line-height: 20px; margin-right: 10px; flex-shrink: 0;
     }
     .bluePoint p{
-        font-size: 13px; line-height: 20px; font-weight: 300; color: var(--subtxt); max-width: 580px; word-break: keep-all;
+        font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt); word-break: keep-all;
     }
     .blueMapicon{
-        font-size: 15px; line-height: 18px; font-weight: 400; color: var(--maintxt);
+        font-size: 13px; line-height: 18px; font-weight: 400; color: var(--maintxt);
     }
     .blueMapicon::before{
         content: ''; display: inline-block; width: 16px; height: 17px; vertical-align: text-top;
-        background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 5px;
+        background: url('../img/icon/locate.png') no-repeat center / contain; margin-right: 3px;
     }
     .slideType01 .bluePoint{
         margin-bottom: 15px; margin-top: 70px;
     }
     .bgBox{
-        margin-bottom: 200px; height: 100vh; background-repeat: no-repeat; background-position: top; background-size: cover;
+        margin-bottom: 150px; height: 100vh; background-repeat: no-repeat; background-position: top; background-size: cover;
     }
     .greybg{
         background-color: var(--bg01);
@@ -1484,31 +1484,34 @@
     [class^='programPage'] .programShow01 >*:not(.greybg),
     .programPage03 .aquaristPart01,
     [class^='passPage'] >*:not(.bgBox){
-        padding: 0 12.5%;
+        padding: 0 3.125%;
     }
     .titleBox{
-        position: absolute; top: 360px; left: 12.5%;
+        position: absolute; top: 360px; left: 3.125%;
     }
     .titleBox>*{
         color: var(--white01);
     }
     .titleBox p.line{
-        font-size: 14px; font-family: var(--pop); font-weight: 400; line-height: 22px; letter-spacing: 1.5px; margin-bottom: 15px;
+        font-size: 14px; font-family: var(--pop); font-weight: 400; line-height: 22px; letter-spacing: 1.5px; margin-bottom: 10px;
     }
     p.line::after{
         content: ''; width: 150px; height: 1px; background-color: rgba(255,255,255,0.5); display: inline-block; margin-left: 5px; vertical-align: middle;
     }
     .titleBox p:last-of-type{
-        font-size: 48px; font-weight: 200; line-height: 65px;
+        font-size: 40px; font-weight: 200; line-height: 55px;
     }
     .titleBox p:last-of-type b{
         font-weight: 600;
     }
     .mainTopText{
-        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin-bottom: 120px;
+        display: flex; flex-direction: column; margin-bottom: 120px;
+    }
+    .mainTopText > span+span{
+        margin-top: 25px;
     }
     .mainTopText span > b{
-        font-size: 35px; font-weight: 400; line-height: 40px; margin-bottom: 30px; display: block;
+        font-size: 30px; font-weight: 400; line-height: 40px; margin-bottom: 30px; display: block;
     }
     .mainTopText span p{
         font-size: 18px; font-weight: 400; line-height: 28px; color: var(--subtxt);
@@ -1798,7 +1801,7 @@
         text-align: center;
     }
     .guidancePage01 .wallPaper > span div.navBtn p{
-        margin: 0 15px; font-size: 30px; font-weight: 500; line-height: 48px; color: var(--subtxt);
+        margin: 0 15px; font-size: 25px; font-weight: 500; line-height: 35px; color: var(--subtxt);
     }
     .guidancePage01 .wallPaper div.calendar ul.weeks{
         background-color: var(--ss10); display: flex; flex-direction: row; border: 1px solid var(--grey03);
@@ -1817,18 +1820,15 @@
         color: var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li{
-        font-size: 20px; line-height: 28px; font-weight: 500; color: var(--subtxt);
-        width: calc(100% / 7); padding-top: 20px; padding-left: 30px; box-sizing: border-box; height: 150px;
+        font-size: 15px; line-height: 22px; font-weight: 500; color: var(--subtxt);
+        width: calc(100% / 7); padding-top: 10px; padding-left: 15px; box-sizing: border-box; height: 150px;
         border-bottom: 1px solid var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li:not(:nth-of-type(7n)){
         border-right: 1px solid var(--grey03);
     }
-    .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol,.guidancePage01 .wallPaper div.calendar ul.days > li.today ol{
-        margin-top: 10px;
-    }
     .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li,.guidancePage01 .wallPaper div.calendar ul.days > li.today ol li{
-        font-size: 12px; line-height: 20px; font-weight: 400; color:  var(--subtxt);
+        font-size: 12px; line-height: 20px; font-weight: 400; color:  var(--subtxt); max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li.blueNotice{
         color: var(--ss06); margin-top: 10px;
@@ -1858,7 +1858,7 @@
         box-sizing: border-box;
     }
     .guidancePage04 .convPart02{
-        display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 200px;
+        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; margin-bottom: 200px; gap: 20px;;
     }
     .guidancePage04 .convPart02 li{
         text-align: center;
@@ -2058,7 +2058,7 @@
         display: block;
     }
     .friendmainBox > div:nth-of-type(2) > div > b{
-        font-size: 35px; line-height: 40px; font-weight: 500; margin-bottom: 25px;
+        font-size: 30px; line-height: 40px; font-weight: 500; margin-bottom: 15px;
     }
     .friendmainBox > div:nth-of-type(2) > div > p{
         font-size: 18px; line-height: 28px; font-weight: 400;
@@ -2070,19 +2070,19 @@
         margin-bottom: 70px;
     }
     .friendmainBox > div:nth-of-type(2) div ul {
-        display: flex; flex-direction: row; gap: 24px;
+        display: flex; flex-direction: row; gap: 16px;
     }
     .friendmainBox > div:nth-of-type(2) div ul li div{
        box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2); border-radius: 15px; overflow: hidden; transition: 0.5s;
     }
     .friendmainBox > div:nth-of-type(2) div ul li div span{
-        padding: 35px 30px; display: block; box-sizing: border-box;
+        padding: 20px 10px; display: block; box-sizing: border-box;
     }
     .friendmainBox > div:nth-of-type(2) div ul li:hover div{
         box-shadow: 0px 6px 16px 5px rgba(61, 61, 61, 0.3); transition: 0.5s;
     }
     .friendmainBox > div:nth-of-type(2) div ul li b{
-        font-size: 25px; line-height: 30px; font-weight: 500; margin-bottom: 5px; display: block;
+        font-size: 20px; line-height: 30px; font-weight: 500; margin-bottom: 5px; display: block;
     }
     .friendmainBox > div:nth-of-type(2) div ul li small{
         font-size: 15px; line-height: 18px; font-weight: 300; color: var(--subtxt); font-family: var(--pop); margin-bottom: 20px; display: block;
@@ -2096,14 +2096,11 @@
     .friendBox figure{
         margin-bottom: 150px;
     }
-    .friendBox figure>*{
-        float: left;
-    }
     .friendBox figure img{
-        width: 40.694%;
+        margin-bottom: 50px;
     }
     .friendBox figure figcaption{
-        margin-left: 1.666%; padding-left: 40px;padding-top: 5px; box-sizing: border-box; width: 57.430%;
+        padding:0 5px; box-sizing: border-box;
     }
     .friendBox figure figcaption > div:first-of-type{
         display: flex; flex-direction: row; justify-content: space-between; align-items: center;
@@ -2123,14 +2120,14 @@
         margin-bottom: 10px;
     }
     .friendBox figure figcaption > div:last-of-type{
-        font-size: 15px; line-height: 26px; font-weight: 400; margin-bottom: 50px;
+        font-size: 15px; line-height: 26px; font-weight: 400; margin-bottom: 25px;
     }
     .infoPart{
-        background-color: var(--bg01); display: flex; flex-direction: row;  gap: 6.9444%; margin: 0 12.5% 100px;
-        padding: 95px 0; border-radius: 55px; box-sizing: border-box; justify-content: center; 
+        background-color: var(--bg01); display: flex; flex-direction: row; margin: 0 3.125% 100px; gap: 50px 0;
+        padding: 95px 0; border-radius: 55px; box-sizing: border-box; justify-content: space-evenly; flex-wrap: wrap;
     }
     .infoPart li{
-        width: 13.888%;
+        width: 35%;
     }
     .infoPart li span{
         font-size: 18px; line-height: 28px; font-weight: 600; margin-bottom: 10px; display: block; 
@@ -2161,24 +2158,24 @@
         order: 1;
     }
     .friendBox > div:last-of-type{
-        position: relative; background-repeat: no-repeat; background-position: center; background-size: contain; height: 100vh;
+        position: relative; background-repeat: no-repeat; background-position: 75%; background-size: cover; height: 100vh;
         background-attachment: fixed;
     }
     .friendBox > div:last-of-type div{
         position: absolute; 
     }
     .friendBox > div:last-of-type div b{
-        display: block; font-family: var(--pop); font-size: 64px; font-weight: 600; line-height: 80px; margin-bottom: 10px;
+        display: block; font-family: var(--pop); font-size: 45px; font-weight: 600; line-height: 48px; margin-bottom: 10px;
         color: var(--white01);
     }
     .friendBox > div:last-of-type div span{
-        font-size: 18px; font-weight: 500; line-height: 28px; display: block; max-width: 765px; color: var(--white01);
+        font-size: 15px; font-weight: 500; line-height: 24px; display: block; color: var(--white01);
     }
     .turtleBox > div:last-of-type{
         background-image: url('../img/bg/turtle_bg_02.jpg');
     }
     .turtleBox > div:last-of-type div,.piraBox > div:last-of-type div{
-        bottom: 150px; left: 12.5%;
+        bottom: 100px; left: 3.125%;
     }
     .piraBox > div:last-of-type{
         background-image: url('../img/bg/pira_bg_02.jpg');
@@ -2187,7 +2184,7 @@
         background-image: url('../img/bg/shark_bg_02.jpg');
     }
     .sharkBox > div:last-of-type div{
-        top: 150px; left: 12.5%;
+        top: 100px; left: 3.125%;
     }
     .aquariumPart01::after{
         content: ''; display: block; clear: both;
@@ -2203,10 +2200,10 @@
     }
     .aquariumPart01 div{
         width: 57.638%; margin-left: 1.666%; float: left;  padding-left: 8.4722%; box-sizing: border-box;
-        padding-top: 110px;
+        padding-top: 50px;
     }
     .aquariumPart01 div b{
-        font-size: 35px; line-height: 40px; font-weight: 600; display: block; margin-bottom: 25px;
+        font-size: 30px; line-height: 40px; font-weight: 600; display: block; margin-bottom: 25px;
     }
     .aquariumPart01 div p{
         font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt);
@@ -2231,7 +2228,7 @@
         background-repeat: no-repeat; background-size: cover; background-position: center;
     }
     .aquariumPart03 > div {
-        max-width: 1440px; margin: 0 12.5%; padding: 200px 0 250px; position: relative;
+        max-width: 1440px; margin: 0 3.125%; padding: 200px 0 250px; position: relative;
     }
     .slideType03 {
         max-width: 1200px; margin: 0 8.3333%;
@@ -2264,7 +2261,7 @@
         margin-bottom: 250px;
     }
     .noticeDepthBox div:nth-of-type(2){
-        border-bottom: 2px solid var(--subtxt); margin: 0 12.5%;
+        border-bottom: 2px solid var(--subtxt); margin: 0 3.125%;
     }.noticeDepthBox div:nth-of-type(2) a{
         display: inline-block; padding-bottom: 25px;
         color: var(--subtxt); font-size: 20px; line-height: 28px; font-weight: 400; padding-left: 20px;
@@ -2274,13 +2271,13 @@
         width: 15px; height: 15px;
     }
     .noticeDepthBox .noticeBox{
-        border-bottom: 1px solid var(--grey01); margin: 0 12.5%; margin-bottom: 25px;
+        border-bottom: 1px solid var(--grey01); margin: 0 3.125%; margin-bottom: 25px;
     }
     .noticeDepthBox .noticeBox span{
-        display: flex; flex-direction: row; padding: 40px;margin-bottom: 95px; border-bottom: 1px solid var(--grey01);
+        display: flex; flex-direction: row; padding: 20px;margin-bottom: 95px; border-bottom: 1px solid var(--grey01);
     }
     .noticeDepthBox .noticeBox span>*:not(small){
-        font-size: 25px; line-height: 30px; font-weight: 500;
+        font-size: 20px; line-height: 30px; font-weight: 500;
     }
     .noticeDepthBox .noticeBox span b::after{
         content: '|'; display: inline-block; margin: 0 15px;
@@ -2307,7 +2304,7 @@
         display: block; text-align: right;
     }
     [class^='programPage'] .textType02 b{
-        font-size: 35px; font-weight: 500; line-height: 40px; margin-bottom: 25px; display: block;
+        font-size: 30px; font-weight: 500; line-height: 40px; margin-bottom: 15px; display: block;
     }
     [class^='programPage'] .textType02 p:first-of-type{
         font-size: 18px; color: var(--subtxt); line-height: 28px; font-weight: 400; margin-bottom: 50px;
@@ -2334,7 +2331,7 @@
         margin-left: 5px;
     }
     [class^='programPage']:not(.programPage03) .bluePoint{
-        margin-top: 45px;
+        margin-top: 25px;
     }
     [class^='programPage']:not(.programPage03) > div:nth-of-type(2) > div:not(:last-of-type){
         margin-bottom: 200px;
@@ -2349,13 +2346,10 @@
         display: block; content: ''; clear: both;
     }
     .programPage03 .aquaristPart01 > div .slideType02{
-        float: left; width: 50%;
-    }
-    .programPage03 .aquaristPart01 > div .textType02{
-        float: left; width: 34.222%; margin-left: 15.778%;
+        width: 75%; margin-bottom: 50px;
     }
     .programPage03 .aquaristPart01 .bluePoint{
-        margin-bottom: 100px; margin-top: 25px;
+        margin-bottom: 50px; margin-top: 25px;
     }
     
     
@@ -2425,16 +2419,13 @@
     }
     
     .programShow01 > div:not(.greybg),.programShow01 .greybg > div{
-        display: flex; gap: 1.666%;
+        display: flex; flex-direction: column;
     }
     .programShow01 .textType02{
-        width: 32.222%;
-    }
-    .programShow01 > div .textType02+div{
-        flex-grow: 1; width: 66.111%;
+        margin-bottom: 50px;
     }
     .programShow01 .greybg > div{
-        padding: 150px 12.5%;
+        padding: 150px 3.125%;
     }
     
     .swiper-container {
@@ -2498,7 +2489,7 @@
         border-width:0px 1px 1px; border-color: var(--grey03); border-style: solid;
     }
     .mealPart02 table tbody tr td:first-of-type{
-        font-size: 20px; font-weight: 600; min-width: 160px;
+        font-size: 20px; font-weight: 600; min-width: 130px;
     }
     .mealPart02 table tbody tr td:not(:last-of-type){
         border-right: 1px solid var(--grey03);
@@ -2515,7 +2506,7 @@
         background: url(../img/icon/arrow_two.png) no-repeat center / contain; cursor: pointer;
       }
       .custom-button-prev {
-        transform: rotate(180deg) translateY(50%); left: -8.222%; opacity: 0.3;
+        transform: rotate(180deg) translateY(50%); left: -13.222%; opacity: 0.3;
       }
       .custom-button-next {
         right: -12.6%;
@@ -2524,7 +2515,7 @@
         margin-bottom: 70px;
       }
       [class^='passPage'] .title01 b{
-        font-size: 35px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 25px; 
+        font-size: 30px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 25px; 
       }
       [class^='passPage'] .title01 p{
         font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt);
@@ -2542,22 +2533,25 @@
         margin-bottom: 5px;
       }
       [class^='passPage'] .title02 small{
-        margin-top: 15px;
+        margin-top: 10px;
       }
       [class^='passPage'] .greybg{
-        padding: 150px 12.5%; margin-bottom: 200px;
+        padding: 150px 3.125%; margin-bottom: 200px;
       }
       [class^='passPage'] .greybg .treatType01 span{
         background-color: var(--white01);
       }
+      .passPage02,.passPage04,.passPage05{
+        margin-bottom: 200px;
+      }
       .passPage02 .yearPassPart02{
-        display: flex; gap: 24px; margin-bottom: 200px;
+        margin-bottom: 200px;
       }
       .passPage02 .yearPassPart02 img{
-        max-width: 708px; width: 49.1666%;
+        width: 100%; margin-bottom: 40px;
       }
       .passPage02 .yearPassPart02 > div{
-        padding: 30px 40px; box-sizing: border-box;
+        padding: 0 5px; box-sizing: border-box;
       }
       .passPage02 .yearPassPart02 > div ul{
         margin-bottom: 45px;
@@ -2565,29 +2559,20 @@
       .passPage02 .yearPassPart02 > div .bluePoint{
         font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt);
       }
+      .passPage02 .yearPassPart02 > div .bluePoint br{
+        display: none;
+      }
       .passPage02 .yearPassPart03::after{
         display: block; clear: both; content: '';
       }
       .passPage02 .yearPassPart03{
-        padding: 150px 12.5%;  margin-bottom: 200px;
-      }
-      .passPage02 .yearPassPart03>*{
-        float: left;
-      }
-      .passPage02 .yearPassPart03 > span{
-        width: 23.75%;
+        padding: 150px 3.125%;  margin-bottom: 200px;
       }
       .passPage02 .yearPassPart03 > span small{
         font-size: 13px; color: var(--sub02txt); font-weight: 400; line-height: 20px; display: block;
       }
-      .passPage02 .yearPassPart03 > div{
-        width: 66.111%; margin-left: 10.138%;
-      }
-      .passPage02 .yearPassPart03 > div ul{
-        display: flex; flex-direction: row; gap: 2.521%; flex-wrap: wrap;
-      }
-      .passPage02 .yearPassPart03 > div > ul > li{
-        width: 48.739%;
+      .passPage02 .yearPassPart03 .title02{
+        text-align: center;
       }
       .passPage02 .yearPassPart04 > span{
         display: block; text-align: center; margin-bottom: 50px;
@@ -2602,17 +2587,20 @@
     
     
       .treatType01{
-        display: flex; flex-direction: row; flex-wrap: wrap; gap: 1.666%;
+        display: flex; flex-direction: row; flex-wrap: wrap; gap: 2.521%;
       }
       .treatType01 > li{
-        width: 32.222%; margin-bottom: 70px;
+        width: 48.739%;
+      }
+      .treatType01 > li:not(:last-of-type){
+        margin-bottom: 70px;
       }
       .treatType01 li span{
         border: 1px solid #e8e8e8; display: flex; margin-bottom: 20px; justify-content: center;
         box-sizing: border-box; max-height: 135px; min-height: 135px;
       }
       .treatType01 li:not(.hLogo) span{
-        padding: 45px 95px;
+        padding: 45px 75px;
       }
       .treatType01 li.hLOgo span{
         padding: 35px 85px; 
@@ -2624,7 +2612,7 @@
         display: block; padding: 0 10px;
       }
       .treatType01 li div b{
-        font-size: 18px; line-height: 28px; font-weight: 600; display: block; margin-bottom: 5px;
+        font-size: 18px; line-height: 28px; font-weight: 500; display: block; margin-bottom: 5px;
       }
       .treatType01 li div ol li{
         font-size: 15px; line-height: 24px; font-weight: 400; color: var(--subtxt);
@@ -2634,10 +2622,10 @@
       }
     
       .themeBox .themePage01 > ul{
-        display: flex; flex-direction: row; gap: 85px 50px; flex-wrap: wrap;
+        display: flex; flex-direction: row; gap: 50px 2.083%; flex-wrap: wrap;
       }
       .themeBox .themePage01 > ul li{
-        text-align: right; width: 22.361%;  position: relative;
+        text-align: right; width: 31.944%;  position: relative;
       } 
       .themeBox .themePage01 > ul li a div{
         overflow: hidden; display: block; border-radius: 15px; margin-bottom: 20px;
@@ -2666,18 +2654,24 @@
       .themeBox .greybg p{
         font-size: 16px; line-height: 20px; font-weight: 400;
       }
-      .passPage01 [class^='normal']{
-        margin-bottom: 400px;
+      .passPage01 .normal01{
+        margin-bottom: 200px;
+      }
+      .passPage01 .normal02{
+        margin-bottom: 50px;
       }
       .passPage01 [class^='normal'] > b{  
-        font-size: 35px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 50px;
+        font-size: 30px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 40px;
         text-align: center;
       }
       .passPage01 [class^='normal'] > ul{
-        display: flex; flex-direction: row; gap: 1.666%; flex-wrap: wrap;
+        display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 2.083%;
       }
       .passPage01 [class^='normal'] > ul > li{
-        width: 23.75%; position: relative;
+        width: 48.612%; position: relative;
+      }
+      .passPage01 [class^='normal'] > ul > li:nth-of-type(-n+2){
+        margin-bottom: 50px;
       }
       .passPage01 [class^='normal'] > ul li > span{
         background-color: var(--gs01); font-size: 20px; line-height: 18px; color: var(--white01);
@@ -2687,14 +2681,14 @@
       .passPage01 [class^='normal'] ul li > div{
         padding: 30px 25px; box-sizing: border-box;
       }
-      .passPage01 [class^='normal'] ul li div b{
+      .passPage01 [class^='normal'] ul li div > b{
         font-size: 20px; line-height: 28px; font-weight: 600; display: block; margin-bottom: 30px;
       }
       .passPage01 [class^='normal'] ul li div b small{
         font-size: 15px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block; margin-top: 5px;
       }
       .passPage01 [class^='normal'] ul li div > span{
-        display: flex; flex-direction: row; justify-content: space-between;
+        display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 25px;
       }
       .passPage01 [class^='normal'] ul li div > span span small:first-of-type{
         font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt); display: block;
@@ -2706,14 +2700,11 @@
         font-size: 25px; line-height: 30px; font-weight: 500; display: block;
       }
       .passPage01 [class^='normal'] ul li > div{
-        background-color: var(--white01); overflow: hidden; transition: 0.5s ease-in; position: absolute; width: 100%;
-        transform: translateY(0px); transform-origin: top; height: 190px; box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2);
-      }
-      .passPage01 [class^='normal'] ul li:hover > div{
-        transform: translateY(-150px); height: auto; transition: 0.5s ease-in;
+        background-color: var(--white01); box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2); min-height: 400px;
       }
       .passPage01 [class^='normal'] ul li > div div a{
-        font-size: 20px; line-height: 28px; font-weight: 600; display: block; text-align: right;
+        font-size: 20px; line-height: 28px; font-weight: 600; display: block; text-align: right; 
+        position: absolute; bottom: 30px; right: 25px;
       }
       .passPage01 [class^='normal'] ul li > div div a:hover{
         color: var(--ss06);
@@ -2722,7 +2713,7 @@
         font-size: 15px; line-height: 18px; font-weight: 400; margin-bottom: 5px;
       }
       .passPage01 [class^='normal'] ul li > div div ul{
-        margin-top: 15px; margin-bottom: 40px;
+        margin-top: 15px;
       }
       .passPage01 [class^='normal'] ul li > div div ul li{
         font-size: 13px; line-height: 20px; font-weight: 400; color: var(--subtxt);

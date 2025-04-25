@@ -235,6 +235,9 @@ a {
     header .header_inner aside nav ul{
         margin-bottom: 70px;
     }
+    header .header_inner aside nav ul > li ol{
+        margin-bottom: 20px;
+    }
     header .header_inner aside nav ul > li > a{
         font-size: 18px; font-weight: 500; line-height: 55px; display: block; position: relative; transition: 0.3s;
     }
