@@ -113,8 +113,14 @@ function toggleDown(targetC) {
 
 function toggleDown02(targetT) {
   $(targetT).click(function () {
-      $(this).next().stop().slideToggle();
-      $(this).toggleClass('openM');
+      const $this = $(this);
+
+      // 다른 열린 메뉴 닫기
+      $(targetT).not($this).removeClass('openM').next().stop(true, true).slideUp();
+
+      // 현재 클릭한 메뉴 토글
+      $this.next().stop(true, true).slideToggle();
+      $this.toggleClass('openM');
   });
 }
 
