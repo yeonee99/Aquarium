@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener("DOMContentLoaded", function() {
     const slide = new Swiper('.thema_slide', {
-      slidesPerView: 6,
+      slidesPerView: 2.3,
       spaceBetween: 0,
       loop: true,
       pagination: false,
@@ -221,7 +221,13 @@ document.addEventListener("DOMContentLoaded", function() {
       grabCursor: true,
       freeMode: true,
       simulateTouch: true,
-      touchReleaseOnEdges: true
+      touchReleaseOnEdges: true,
+      breakpoints: {
+        769: {
+          slidesPerView: 6,
+          spaceBetween: 0
+        }
+      }
     });
   });
 
