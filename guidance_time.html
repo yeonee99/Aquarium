@@ -170,9 +170,9 @@
       <div class="wallPaper">
         <span>
           <div class="navBtn">
-            <span>< </span>
-            <p class="current-date">2025년 02월</p>
-            <span>></span>
+            <span class="cal-prev">&lt;</span>
+            <p class="current-date"></p>
+            <span class="cal-next">&gt;</span>
           </div>
         </span>
         <div class="calendar">
@@ -185,61 +185,7 @@
             <li>금</li>
             <li>토</li>
           </ul>
-          <ul class="days">
-            <li class="inactive">26</li>
-            <li class="inactive">27</li>
-            <li class="inactive">28</li>
-            <li class="inactive">29</li>
-            <li class="inactive">30</li>
-            <li class="inactive">31</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li class="noticeDays">6
-              <ol>
-                <li>운영 시간 | 10:00 - 17:00</li>
-                <li>입장 마감 | 16:00</li>
-                <li class="blueNotice">*대관으로 인한 관람 시간 조정</li>
-              </ol>
-            </li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li class="noticeDays">
-              18
-              <ol>
-                <li></li>
-                <li></li>
-                <li class="blueNotice">*전체대관으로 인한 휴무</li>
-              </ol>
-            </li>
-            <li>19</li>
-            <li>20</li>
-            <li class="today">21
-                <ol>
-                  <li>운영 시간 | 10:00 - 20:00</li>
-                  <li>입장 마감 | 19:00</li>
-                </ol>
-            </li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li class="inactive">1</li>
-          </ul>
+          <ul class="days"></ul>
         </div>
       </div>
         </section>
@@ -329,5 +275,117 @@
            <a href="https://www.visitsealife.com/" target="_blank" class="moreBtn02">더 많은 SEALIFE 보기</a>
         </div>
    </footer>
+
+<script>
+$(function () {
+
+  /* ============================================================
+     일정 데이터
+     형식: 'YYYY-MM-DD': [ { text: '내용', type: 'normal' | 'blue' }, ... ]
+     일정을 추가하려면 아래 schedules 객체에 날짜 키를 추가하세요.
+  ============================================================ */
+  var schedules = {
+    '2025-02-06': [
+      { text: '운영 시간 | 10:00 - 17:00', type: 'normal' },
+      { text: '입장 마감 | 16:00',          type: 'normal' },
+      { text: '*대관으로 인한 관람 시간 조정', type: 'blue'   }
+    ],
+    '2025-02-18': [
+      { text: '*전체대관으로 인한 휴무', type: 'blue' }
+    ],
+    '2025-02-21': [
+      { text: '운영 시간 | 10:00 - 20:00', type: 'normal' },
+      { text: '입장 마감 | 19:00',          type: 'normal' }
+    ],
+    '2026-05-05': [
+      { text: '어린이날 특별 운영',          type: 'normal' },
+      { text: '운영 시간 | 09:00 - 21:00',  type: 'blue'   }
+    ],
+    '2026-05-25': [
+      { text: '*대관으로 인한 단축 운영',     type: 'blue'   },
+      { text: '운영 시간 | 10:00 - 17:00',  type: 'normal' },
+      { text: '입장 마감 | 16:00',           type: 'normal' }
+    ]
+  };
+  /* ============================================================ */
+
+  var today        = new Date();
+  var currentYear  = today.getFullYear();
+  var currentMonth = today.getMonth();   // 0-indexed
+
+  function pad(n) {
+    return n < 10 ? '0' + n : '' + n;
+  }
+
+  function renderCalendar(year, month) {
+    var firstDay     = new Date(year, month, 1).getDay();          // 시작 요일 (0=일)
+    var lastDate     = new Date(year, month + 1, 0).getDate();     // 이번 달 마지막 날
+    var prevLastDate = new Date(year, month, 0).getDate();         // 이전 달 마지막 날
+    var totalCells   = Math.ceil((firstDay + lastDate) / 7) * 7;  // 그리드 총 칸 수
+
+    // 헤더 월 표시 업데이트
+    $('.current-date').text(year + '년 ' + pad(month + 1) + '월');
+
+    var html = '';
+
+    for (var i = 0; i < totalCells; i++) {
+      if (i < firstDay) {
+        /* 이전 달 날짜 */
+        html += '<li class="inactive">' + (prevLastDate - firstDay + i + 1) + '</li>';
+
+      } else if (i < firstDay + lastDate) {
+        /* 이번 달 날짜 */
+        var day     = i - firstDay + 1;
+        var dateStr = year + '-' + pad(month + 1) + '-' + pad(day);
+        var isToday = (today.getFullYear() === year && today.getMonth() === month && today.getDate() === day);
+        var events  = schedules[dateStr] || [];
+
+        var classes = [];
+        if (isToday)        classes.push('today');
+        if (events.length)  classes.push('noticeDays');
+
+        html += '<li' + (classes.length ? ' class="' + classes.join(' ') + '"' : '') + '>';
+        html += day;
+
+        if (events.length) {
+          html += '<ol>';
+          $.each(events, function (_, ev) {
+            html += '<li' + (ev.type === 'blue' ? ' class="blueNotice"' : '') + '>' + ev.text + '</li>';
+          });
+          html += '</ol>';
+        }
+        html += '</li>';
+
+      } else {
+        /* 다음 달 날짜 */
+        html += '<li class="inactive">' + (i - firstDay - lastDate + 1) + '</li>';
+      }
+    }
+
+    $('.days').html(html);
+  }
+
+  // 화살표 버튼 커서 스타일
+  $('.cal-prev, .cal-next').css('cursor', 'pointer');
+
+  // 초기 렌더링
+  renderCalendar(currentYear, currentMonth);
+
+  // 이전 달
+  $('.cal-prev').on('click', function () {
+    currentMonth--;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  // 다음 달
+  $('.cal-next').on('click', function () {
+    currentMonth++;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    renderCalendar(currentYear, currentMonth);
+  });
+
+});
+</script>
 </body>
 </html>

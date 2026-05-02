@@ -2910,9 +2910,6 @@
     .mainPart01{
         position: relative;
     }
-    .mainSlide01{
-        display: none ! important;
-    }
     .mainSlide01 li{
         position: relative;
     }
@@ -2920,27 +2917,20 @@
      position: absolute; bottom: 55px; left: 3.125%;
     }
     .mainSlide01 li span b{
-        font-size: 35px; color: var(--white01); font-weight: 600; line-height: 40px; display: block; margin-bottom: 5px;
+        font-size: 16px; color: var(--white01); font-weight: 600; display: block; margin-bottom: 5px;
         letter-spacing: 2px; font-family: var(--pop);
     }
     .mainSlide01 li span small{
-        font-size: 15px; color: var(--white01); font-weight: 500; line-height: 22px; display: block;
+        font-size: 13px; color: var(--white01); font-weight: 500; line-height: 22px; display: block;
     }
     .mainSlide01 li img{
         max-height: 850px; overflow: hidden; object-fit: cover; object-position: center; width: 100%; height: 100%;
     }
     .slideArrow>*{
-        top: 40.449%; width: 40px; height: 40px; position: absolute; z-index: 99; cursor: pointer;
-    }
-    .prevArr{
-        background:url('../img/icon/arrow_light.png') no-repeat; left: 3.125%; background-size: 15px;
-    }
-    .nextArr{
-        background:url('../img/icon/arrow_light.png') no-repeat; right: 3.125%; background-size: 15px;
-        transform: rotate(180deg);
+        display: none;
     }
     .slideIndex{
-        position: absolute; bottom: 25px; left: 50%; transform: translate(-50%,-50%); 
+        position: absolute; bottom: 5px; left: 50%; transform: translate(-50%,-50%); 
     }
     .progressbar{
         background-color: var(--white01); width: 60px; height: 2px; display: inline-block;
@@ -2951,7 +2941,7 @@
         transform-origin: left top; transform: scaleX(0); transition-duration: 800ms;
     }
     .mainPart02 > ul{
-        display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        display: grid;  gap: 20px;
     }
     .mainPart02 ul li{
         position: relative;
@@ -2965,7 +2955,7 @@
     .mainPart02 ul li .imgArea{
         width: 100%; margin-bottom: 10px;
     }
-    .mainPart02 ul li .imgWrap img{
+    .mainPart02 ul li .imgWrap .imgAreag{
         width: 100%; height: auto; display: block;
     }
     .mainPart02 ul li .imgArea .cover{
@@ -3625,13 +3615,13 @@
         display: block; text-align: right;
     }
     [class^='programPage'] .textType02 b{
-        font-size: 30px; font-weight: 500; line-height: 40px; margin-bottom: 15px; display: block;
+        font-size: 24px; font-weight: 500; line-height: 40px; margin-bottom: 15px; display: block;
     }
     [class^='programPage'] .textType02 p:first-of-type{
-        font-size: 18px; color: var(--subtxt); line-height: 28px; font-weight: 400; margin-bottom: 50px;
+        font-size: 14px; color: var(--subtxt); line-height: 1.6; font-weight: 400; margin-bottom: 50px;
     }
     [class^='programPage'] .textType02 > span{
-        font-size: 20px; line-height: 28px; font-weight: 600; margin-bottom: 15px; display: block;
+        font-size: 18px; line-height: 28px; font-weight: 600; margin-bottom: 15px; display: block;
     }
     [class^='programPage'] .textType02 dl div{
         display: flex; gap: 5px;
@@ -3640,7 +3630,7 @@
         margin-bottom: 5px;
     }
     [class^='programPage'] .textType02 dl div >*{
-        font-size: 18px; line-height: 28px; font-weight: 500; display: inline-block;
+        font-size: 16px; line-height: 28px; font-weight: 500; display: inline-block;
     }
     [class^='programPage']:not(.programPage03) .textType02 dl dt{
          min-width: 90px;
@@ -3839,19 +3829,19 @@
         margin-bottom: 70px;
       }
       [class^='passPage'] .title01 b{
-        font-size: 30px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 25px; 
+        font-size: 20px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 25px; 
       }
       [class^='passPage'] .title01 p{
-        font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt);
+        font-size: 14px; line-height: 1.6; font-weight: 400; color: var(--subtxt);
       }
       [class^='passPage'] .title02{
         margin-bottom: 50px; display: block;
       }
       [class^='passPage'] .title02 b{
-        font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 20px;
+        font-size: 20px;  font-weight: 500; display: block; margin-bottom: 20px;
       }
       [class^='passPage'] .title02 ul li{
-        font-size: 18px; line-height: 24px; font-weight: 400; color: var(--subtxt);
+        font-size: 16px; font-weight: 400; color: var(--subtxt);
       }
       [class^='passPage'] .title02 ul li:not(:last-of-type){
         margin-bottom: 5px;
@@ -3869,7 +3859,7 @@
         margin-bottom: 200px;
       }
       .passPage02 .yearPassPart02{
-        margin-bottom: 200px;
+        margin-bottom: 60px;
       }
       .passPage02 .yearPassPart02 img{
         width: 100%; margin-bottom: 40px;
@@ -3890,7 +3880,7 @@
         display: block; clear: both; content: '';
       }
       .passPage02 .yearPassPart03{
-        padding: 150px 3.125%;  margin-bottom: 200px;
+        padding: 60px 3.125%;  margin-bottom: 60px;
       }
       .passPage02 .yearPassPart03 > span small{
         font-size: 13px; color: var(--sub02txt); font-weight: 400; line-height: 20px; display: block;
@@ -3902,47 +3892,41 @@
         display: block; text-align: center; margin-bottom: 50px;
       }
       .passPage02 .yearPassPart04 > span b{
-        font-size: 25px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 20px;
+        font-size: 20px; line-height: 30px; font-weight: 500; display: block; margin-bottom: 20px;
       }
       .passPage02 .yearPassPart04 > span p{
-        font-size: 18px; line-height: 28px; font-weight: 400; color: var(--subtxt); max-width: 345px;
+        font-size: 14px; line-height: 1.6; font-weight: 400; color: var(--subtxt); max-width: 345px;
         margin: 0 auto;
       }
     
     
       .treatType01{
-        display: flex; flex-direction: row; flex-wrap: wrap; gap: 2.521%;
+        display: flex; flex-direction: row; flex-wrap: wrap; gap: 40px 2.083%;
       }
       .treatType01 > li{
         width: 48.739%;
       }
-      .treatType01 > li:not(:last-of-type){
-        margin-bottom: 70px;
-      }
       .treatType01 li span{
-        border: 1px solid #e8e8e8; display: flex; margin-bottom: 20px; justify-content: center;
-        box-sizing: border-box; max-height: 135px; min-height: 135px;
+        border: 1px solid #e8e8e8; display: flex; margin-bottom: 20px; justify-content: center; align-items: center;
+        box-sizing: border-box; min-height: 100px;
       }
       .treatType01 li:not(.hLogo) span{
-        padding: 45px 75px;
-      }
-      .treatType01 li.hLOgo span{
-        padding: 35px 85px; 
+        padding: 0 16px;
       }
       .treatType01 li span img{
-        max-width: 100%; object-fit: contain; max-height: 100%;
+        max-width: 100%; object-fit: contain; max-height: 50px;
       }
       .treatType01 li div{
         display: block; padding: 0 10px;
       }
       .treatType01 li div b{
-        font-size: 18px; line-height: 28px; font-weight: 500; display: block; margin-bottom: 5px;
+        font-size: 16px; line-height: 1.6; font-weight: 500; display: block; margin-bottom: 5px;
       }
       .treatType01 li div ol li{
-        font-size: 15px; line-height: 24px; font-weight: 400; color: var(--subtxt);
+        font-size: 13px; line-height: 1.4; font-weight: 400; color: var(--subtxt);
       }
       .treatType01 li div small{
-        display: block; font-size: 13px; line-height: 20px; font-weight: 400; color: var(--sub02txt); margin-top: 15px;
+        display: block; font-size: 13px; line-height: 20px; font-weight: 400; color: var(--sub02txt); margin-top: 10px;
       }
     
       .themeBox .themePage01 > ul{
@@ -3985,17 +3969,14 @@
         margin-bottom: 50px;
       }
       .passPage01 [class^='normal'] > b{  
-        font-size: 30px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 40px;
+        font-size: 26px;  font-weight: 500; display: block; margin-bottom: 30px;
         text-align: center;
       }
       .passPage01 [class^='normal'] > ul{
-        display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 2.083%;
+        display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; gap: 40px;
       }
       .passPage01 [class^='normal'] > ul > li{
-        width: 48.612%; position: relative;
-      }
-      .passPage01 [class^='normal'] > ul > li:nth-of-type(-n+2){
-        margin-bottom: 50px;
+        position: relative;
       }
       .passPage01 [class^='normal'] > ul li > span{
         background-color: var(--gs01); font-size: 20px; line-height: 18px; color: var(--white01);
@@ -4006,7 +3987,7 @@
         padding: 30px 25px; box-sizing: border-box;
       }
       .passPage01 [class^='normal'] ul li div > b{
-        font-size: 20px; line-height: 28px; font-weight: 600; display: block; margin-bottom: 30px;
+        font-size: 20px; line-height: 22px; font-weight: 600; display: block; margin-bottom: 30px;
       }
       .passPage01 [class^='normal'] ul li div b small{
         font-size: 15px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block; margin-top: 5px;
@@ -4024,14 +4005,10 @@
         font-size: 25px; line-height: 30px; font-weight: 500; display: block;
       }
       .passPage01 [class^='normal'] ul li > div{
-        background-color: var(--white01); box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2); min-height: 400px;
+        background-color: var(--white01); box-shadow: 0px 6px 16px 5px rgba(156,156,156,0.2);
       }
       .passPage01 [class^='normal'] ul li > div div a{
         font-size: 20px; line-height: 28px; font-weight: 600; display: block; text-align: right; 
-        position: absolute; bottom: 30px; right: 25px;
-      }
-      .passPage01 [class^='normal'] ul li > div div a:hover{
-        color: var(--ss06);
       }
       .passPage01 [class^='normal'] ul li > div div ol li{
         font-size: 15px; line-height: 18px; font-weight: 400; margin-bottom: 5px;

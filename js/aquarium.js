@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener("DOMContentLoaded", function() {
     const slide = new Swiper('.thema_slide', {
-      slidesPerView: 2.3,
+      slidesPerView: 1.2,
       spaceBetween: 0,
       loop: true,
       pagination: false,

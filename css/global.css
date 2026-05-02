@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Pretendard'; color: var(--maintxt); word-break: keep-all;
+    font-family: 'Pretendard'; color: var(--maintxt);
 }
 li {
     list-style: none;
