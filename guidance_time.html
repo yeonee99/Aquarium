@@ -189,6 +189,17 @@
         </div>
       </div>
         </section>
+
+    <!-- 일정 팝업 -->
+    <div class="calPopupOverlay"></div>
+    <div class="calPopup">
+        <div class="calPopup_head">
+            <p class="calPopup_date"></p>
+            <button class="calPopup_close">✕</button>
+        </div>
+        <ul class="calPopup_list"></ul>
+    </div>
+
     <footer>
         <div>
            <h1>
@@ -275,6 +286,74 @@
            <a href="https://www.visitsealife.com/" target="_blank" class="moreBtn02">더 많은 SEALIFE 보기</a>
         </div>
    </footer>
+
+<style>
+.calPopupOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 900;
+}
+.calPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 12px;
+    width: min(420px, 90vw);
+    padding: 28px 28px 24px;
+    z-index: 901;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.calPopup_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.calPopup_date {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bs10, #1a1a2e);
+}
+.calPopup_close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--subtxt, #666);
+    padding: 0 2px;
+    line-height: 1;
+}
+.calPopup_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.calPopup_list li {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--subtxt, #555);
+    padding: 10px 14px;
+    background: var(--bg01, #f5f5f5);
+    border-radius: 8px;
+    line-height: 1.5;
+}
+.calPopup_list li.blueNotice {
+    color: var(--ss06, #1565c0);
+    background: rgba(21,101,192,0.08);
+}
+.calPopupOverlay.on,
+.calPopup.on {
+    display: block;
+}
+</style>
 
 <script>
 $(function () {
@@ -363,6 +442,23 @@ $(function () {
     }
 
     $('.days').html(html);
+
+    // 일정 있는 날 클릭 → 팝업
+    $('.days li.noticeDays').on('click', function () {
+      var day     = parseInt($(this).text(), 10);
+      var dateStr = year + '-' + pad(month + 1) + '-' + pad(day);
+      var events  = schedules[dateStr] || [];
+
+      $('.calPopup_date').text(year + '년 ' + pad(month + 1) + '월 ' + pad(day) + '일');
+
+      var listHtml = '';
+      $.each(events, function (_, ev) {
+        listHtml += '<li' + (ev.type === 'blue' ? ' class="blueNotice"' : '') + '>' + ev.text + '</li>';
+      });
+      $('.calPopup_list').html(listHtml);
+
+      $('.calPopupOverlay, .calPopup').addClass('on');
+    });
   }
 
   // 화살표 버튼 커서 스타일
@@ -383,6 +479,11 @@ $(function () {
     currentMonth++;
     if (currentMonth > 11) { currentMonth = 0; currentYear++; }
     renderCalendar(currentYear, currentMonth);
+  });
+
+  // 팝업 닫기
+  $(document).on('click', '.calPopup_close, .calPopupOverlay', function () {
+    $('.calPopupOverlay, .calPopup').removeClass('on');
   });
 
 });

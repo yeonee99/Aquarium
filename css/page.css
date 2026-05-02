@@ -484,8 +484,8 @@
         color: var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li{
-        font-size: 20px; line-height: 28px; font-weight: 500; color: var(--subtxt);
-        width: calc(100% / 7); padding-top: 20px; padding-left: 30px; box-sizing: border-box; height: 150px;
+        font-size: 18px; line-height: 28px; font-weight: 500; color: var(--subtxt);
+        width: calc(100% / 7); padding-top: 10px; padding-left: 10px; box-sizing: border-box; height: 150px;
         border-bottom: 1px solid var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li:not(:nth-of-type(7n)){
@@ -498,7 +498,7 @@
         font-size: 12px; line-height: 20px; font-weight: 400; color:  var(--subtxt);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li.blueNotice{
-        color: var(--ss06); margin-top: 10px;
+        color: var(--ss06);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.today{
         background-color: var(--bs10);
@@ -3100,7 +3100,7 @@
     }
     
     .guidancePage01 .wallPaper{
-        margin-bottom: 250px;
+        margin-bottom: 250px; padding: 0 ! important;
     }
     .guidancePage01 .wallPaper > span div.navBtn{
         display: flex; flex-direction: row; justify-content: center; margin-bottom: 45px;
@@ -3128,8 +3128,8 @@
         color: var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li{
-        font-size: 15px; line-height: 22px; font-weight: 500; color: var(--subtxt);
-        width: calc(100% / 7); padding-top: 10px; padding-left: 15px; box-sizing: border-box; height: 150px;
+        font-size: 13px; line-height: 22px; font-weight: 500; color: var(--subtxt);
+        width: calc(100% / 7); padding-top: 10px; padding-left: 10px; box-sizing: border-box; height: 100px;
         border-bottom: 1px solid var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li:not(:nth-of-type(7n)){
