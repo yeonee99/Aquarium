@@ -1,0 +1,10 @@
+.dd{background-color: lightblue; height: 500px;}
+
+.wrap_05{background-color: lightpink; height: 1000px; overflow-y: scroll;}
+.scrollBox{height: 1500px; padding: 260px;}
+.scrollBox .re{position: relative; display: flex; flex-direction: column; }
+.scrollBox .img_01,.scrollBox .img_03{align-self: flex-end;}
+.scrollBox img{max-width: 600px; max-height: 500px;}
+
+.txt_wrap{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background-color: lightcoral;
+width: 500px; height: 300px; margin: 0 auto;}
