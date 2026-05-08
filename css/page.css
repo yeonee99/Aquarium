@@ -3103,7 +3103,7 @@
         margin-bottom: 250px; padding: 0 ! important;
     }
     .guidancePage01 .wallPaper > span div.navBtn{
-        display: flex; flex-direction: row; justify-content: center; margin-bottom: 45px;
+        display: flex; flex-direction: row; justify-content: center; margin-bottom: 45px; align-items: center;
     }
     .guidancePage01 .wallPaper > span div.navBtn >*{
         text-align: center;
@@ -3136,10 +3136,10 @@
         border-right: 1px solid var(--grey03);
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li,.guidancePage01 .wallPaper div.calendar ul.days > li.today ol li{
-        font-size: 12px; line-height: 20px; font-weight: 400; color:  var(--subtxt); max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        font-size: 11px; line-height: 1.4; font-weight: 400; color:  var(--subtxt); max-width: 70px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.noticeDays ol li.blueNotice{
-        color: var(--ss06); margin-top: 10px;
+        color: var(--ss06); margin-top: 4px;
     }
     .guidancePage01 .wallPaper div.calendar ul.days > li.today{
         background-color: var(--bs10);
@@ -3363,7 +3363,7 @@
         font-size: 15px; line-height: 1.4; font-weight: 400;
     }
     .friendmainBox > div:nth-of-type(2){
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
     .friendmainBox > div:nth-of-type(2) > div:first-of-type{
         margin-bottom: 70px;
@@ -3393,7 +3393,7 @@
         content: ''; display: block; clear: both;
     }
     .friendBox figure{
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
     .friendBox figure img{
         margin-bottom: 50px;
@@ -3402,21 +3402,17 @@
         padding:0 5px; box-sizing: border-box;
     }
     .friendBox figure figcaption > div:first-of-type{
-        display: flex; flex-direction: row; justify-content: space-between; align-items: center;
         margin-bottom: 40px; 
     }
     .friendBox figure figcaption > div:first-of-type h3{
-        font-size: 35px; line-height: 40px; font-weight: 500; display: block;
+        font-size: 28px; line-height: 40px; font-weight: 500; display: block; margin-bottom: 16px;
     }
     .friendBox figure figcaption > div:first-of-type h3 small{
         font-size: 18px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block;
         font-family: var(--pop); margin-top: 10px;
     }
     .friendBox figure figcaption > div:first-of-type span small{
-        font-size: 15px; line-height: 18px; font-weight: 400; color: var(--subtxt); display: block;
-    }
-    .friendBox figure figcaption > div:first-of-type span small:first-of-type{
-        margin-bottom: 10px;
+        font-size: 12px; line-height: 18px; font-weight: 400; color: var(--sub02txt); display: block;
     }
     .friendBox figure figcaption > div:last-of-type{
         font-size: 15px; line-height: 26px; font-weight: 400; margin-bottom: 25px;
@@ -3438,17 +3434,13 @@
         margin-bottom: 200px;
     }
     .friendBox > div:nth-of-type(2) > div{
-        border-bottom: 1px solid var(--sub02txt); padding: 100px 0; display: flex; align-items: center;
-    }
-    .friendBox > div:nth-of-type(2) > div span{
-        width: 50%; text-align: center;
+        border-bottom: 1px solid var(--sub02txt); padding: 50px 0;
     }
     .friendBox > div:nth-of-type(2) > div span:first-of-type{
-        font-size: 35px; font-weight: 600; line-height: 40px;  display: block;
+        font-size: 28px; font-weight: 600; display: block;
     }
     .friendBox > div:nth-of-type(2) > div span:last-of-type{
-        font-size: 18px; font-weight: 400; line-height: 28px; display: block; max-width: 520px; margin: 0 auto;
-        color: var(--subtxt);
+        font-size: 14px; font-weight: 400; line-height: 1.6; display: block; color: var(--subtxt);
     }
     .friendBox > div:nth-of-type(2) > div:last-of-type span:first-of-type{
         order: 2;
@@ -3918,13 +3910,13 @@
       }
     
       .themeBox .themePage01 > ul{
-        display: flex; flex-direction: row; gap: 50px 2.083%; flex-wrap: wrap;
+        display: flex; flex-direction: row; gap: 50px 2%; flex-wrap: wrap;
       }
       .themeBox .themePage01 > ul li{
-        text-align: right; width: 31.944%;  position: relative;
+        text-align: center; width: 49%;  position: relative;
       } 
       .themeBox .themePage01 > ul li a div{
-        overflow: hidden; display: block; border-radius: 15px; margin-bottom: 20px;
+        overflow: hidden; display: block; border-radius: 12px; margin-bottom: 10px;
       }
       .themeBox .themePage01 > ul li a div img{
         transition: 0.3s;
@@ -3933,19 +3925,19 @@
         transition: 0.3s; transform: scale(1.1);
       }
       .themeBox .themePage01 > ul li a span{
-        font-size: 20px; line-height: 28px; font-weight: 600; display: block;
+        font-size: 16px;  font-weight: 600; display: block;
       }
       .themeBox .themePage01 > ul li a small{
         font-size: 13px; line-height: 20px; font-weight: 400; color: var(--sub02txt); display: block;
       }
       .themeBox .greybg{
-        padding: 150px 12.5%;
+        padding: 100px 20px;
       }
       .themeBox .greybg > div:first-of-type{
         text-align: center; margin-bottom: 50px;
       }
       .themeBox .greybg b{
-        font-size: 30px; line-height: 48px; font-weight: 500;
+        font-size: 26px; display: block; margin-bottom:16px; font-weight: 500;
       }
       .themeBox .greybg p{
         font-size: 16px; line-height: 20px; font-weight: 400;
