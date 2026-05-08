@@ -3456,17 +3456,17 @@
         position: absolute; 
     }
     .friendBox > div:last-of-type div b{
-        display: block; font-family: var(--pop); font-size: 45px; font-weight: 600; line-height: 48px; margin-bottom: 10px;
-        color: var(--white01);
+        display: block; font-family: var(--pop); font-size: 28px; font-weight: 600; line-height: 48px; margin-bottom: 10px;
+        color: var(--white01); padding-left: 20px;
     }
     .friendBox > div:last-of-type div span{
-        font-size: 15px; font-weight: 500; line-height: 24px; display: block; color: var(--white01);
+        font-size: 13px; font-weight: 500; line-height: 1.6; display: block; color: var(--white01); padding: 0 20px; box-sizing: border-box;
     }
     .turtleBox > div:last-of-type{
         background-image: url('../img/bg/turtle_bg_02.jpg');
     }
     .turtleBox > div:last-of-type div,.piraBox > div:last-of-type div{
-        bottom: 100px; left: 3.125%;
+        top: 50%; left: 0; width: fit-content; transform: translateY(50%);
     }
     .piraBox > div:last-of-type{
         background-image: url('../img/bg/pira_bg_02.jpg');
