@@ -2941,7 +2941,7 @@
         transform-origin: left top; transform: scaleX(0); transition-duration: 800ms;
     }
     .mainPart02 > ul{
-        display: grid;  gap: 20px;
+        display: grid;  gap: 20px; padding: 0 20px; box-sizing: border-box;
     }
     .mainPart02 ul li{
         position: relative;
@@ -3838,13 +3838,13 @@
         margin-top: 10px;
       }
       [class^='passPage'] .greybg{
-        padding: 150px 3.125%; margin-bottom: 200px;
+        padding: 100px 3.125%; margin-bottom: 100px;
       }
       [class^='passPage'] .greybg .treatType01 span{
         background-color: var(--white01);
       }
       .passPage02,.passPage04,.passPage05{
-        margin-bottom: 200px;
+        margin-bottom: 100px;
       }
       .passPage02 .yearPassPart02{
         margin-bottom: 60px;
