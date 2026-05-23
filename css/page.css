@@ -3475,7 +3475,7 @@
         background-image: url('../img/bg/shark_bg_02.jpg');
     }
     .sharkBox > div:last-of-type div{
-        top: 100px; left: 3.125%;
+        top: 50%; left: 3.125%;
     }
     .aquariumPart01::after{
         content: ''; display: block; clear: both;
